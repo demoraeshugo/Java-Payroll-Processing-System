@@ -4,6 +4,8 @@ public class PayrollProcessing {
     private final Company company;
     private String userInput;
     private String[] tokens;
+    private final String[] departmentCodes = { "CS", "ECE", "IT" };
+    private final int[] managerCodes = { 1, 2, 3 };
 
     /**
      * default constructor for PayrollProcessing
@@ -19,7 +21,7 @@ public class PayrollProcessing {
      * @return String array of tokens (Strings split with ,)
      */
     private String[] tokenize(String input) {
-        return input.split(",");
+        return input.split(" ");
     }
 
     /**
@@ -40,16 +42,119 @@ public class PayrollProcessing {
         }
     }
 
-    private void handleAddParttime() {
+    private boolean isValidDeptCode(String code) {
+        for(int i = 0; i < departmentCodes.length; i++) {
+            if( departmentCodes[i].equals(code) ) {
+                return true;
+            }
+        }
 
+        System.out.printf(IoFields.invalidDepartmentCodeLog, code);
+        return false;
+    }
+
+    private boolean isValidDate(Date date) {
+        if(!date.isValid()) {
+            System.out.printf(IoFields.invalidDateLog, date);
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean isValidHourlyRate(float rate) {
+        if( rate < 0 ) {
+            System.out.println(IoFields.invalidPayRateLog);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidMgmtCode(int code) {
+        for(int i = 0; i < managerCodes.length; i++) {
+            if( code == managerCodes[i] ) {
+                return true;
+            }
+        }
+
+        System.out.println(IoFields.invalidManagerCodeLog);
+        return false;
+    }
+
+    private boolean isValidSalary(int salary) {
+        if( salary < 0 ) {
+            System.out.println(IoFields.invalidPayRateLog);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidFields(String deptCode, Date date, float rate) {
+        return isValidDeptCode(deptCode) && isValidDate(date) && isValidHourlyRate(rate);
+    }
+
+    private boolean isValidFields(String deptCode, Date date, int salary) {
+        return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary);
+    }
+
+    private boolean isValidFields(String deptCode, Date date, int salary, int mgmtCode ) {
+        return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
+    }
+
+    // AP Doe,Jane CS 7/1/2020 45.9
+    private void handleAddParttime() {
+        String name = tokens[1];
+        String department = tokens[2];
+        Date dateHired = new Date(tokens[3]);
+        float rate = Float.parseFloat(tokens[4]);
+
+        if(!isValidFields(department, dateHired, rate)) {
+            return;
+        }
+
+        if(!company.add(new Parttime(name, department, dateHired, rate))) {
+            System.out.println(IoFields.employeeAddFailureLog);
+            return;
+        }
+
+        System.out.println(IoFields.employeeAddSuccessLog);
     }
 
     private void handleAddFulltime() {
+        String name = tokens[1];
+        String department = tokens[2];
+        Date dateHired = new Date(tokens[3]);
+        int salary = Integer.parseInt(tokens[4]);
 
+        if(!isValidFields(department, dateHired, salary)) {
+            return;
+        }
+
+        if(!company.add(new Fulltime(name, department, dateHired, salary))) {
+            System.out.println(IoFields.employeeAddFailureLog);
+            return;
+        }
+
+        System.out.println(IoFields.employeeAddSuccessLog);
     }
 
     private void handleAddManager() {
+        String name = tokens[1];
+        String department = tokens[2];
+        Date dateHired = new Date(tokens[3]);
+        int salary = Integer.parseInt(tokens[4]);
+        int mgmtCode = Integer.parseInt(tokens[5]);
 
+        if(!isValidFields(department, dateHired, salary, mgmtCode)) {
+            return;
+        }
+
+        if(!company.add(new Fulltime(name, department, dateHired, salary))) {
+            System.out.println(IoFields.employeeAddFailureLog);
+            return;
+        }
+
+        System.out.println(IoFields.employeeAddSuccessLog);
     }
 
     private void handleRemoveEmployee() {
