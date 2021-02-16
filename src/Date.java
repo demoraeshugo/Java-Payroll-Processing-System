@@ -1,11 +1,11 @@
 import java.util.Calendar;
 
 /**
- *   Date class provides the structure for the Date object, which contains a year, month and day.
- *   It also contains informative methods to determine how many days are in each month, and whether
- *   a certain Date object is valid. The Book class has a attribute datePublished which is of type Date.
+ * Date class provides the structure for the Date object, which contains a year, month and day.
+ * It also contains informative methods to determine how many days are in each month, and whether
+ * a certain Date object is valid. The Book class has a attribute datePublished which is of type Date.
  *
- *   @author Hugo De Moraes, Jonathan Dong
+ * @author Hugo De Moraes, Jonathan Dong
  */
 public class Date implements Comparable<Date> {
     private final int year;
@@ -38,7 +38,28 @@ public class Date implements Comparable<Date> {
 
     @Override
     public int compareTo(Date date) {
-        return 1;
+
+        if (this.year < date.year) {                            //first compare Years
+            return -1;
+        } else if (this.year > date.year) {
+            return 1;
+        } else {
+            if (this.month < date.month) {                      //then compare months
+                return -1;
+            } else if (this.month > date.month) {
+                return 1;
+            } else {
+                if (this.day < date.day)                        //finally compare days
+                    return -1;
+                else if (this.day > date.day) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+
+
     } //return 1, 0, or -1
 
     /**
