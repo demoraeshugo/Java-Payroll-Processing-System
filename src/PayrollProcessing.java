@@ -42,16 +42,8 @@ public class PayrollProcessing {
         }
     }
 
-    private boolean isValidDeptCode(String code) {
-        for(int i = 0; i < departmentCodes.length; i++) {
-            if( departmentCodes[i].equals(code) ) {
-                return true;
-            }
-        }
 
-        System.out.printf(IoFields.invalidDepartmentCodeLog, code);
-        return false;
-    }
+    /* -------------- Helper Methods -------------- */
 
     private boolean isValidDate(Date date) {
         if(!date.isValid()) {
@@ -62,8 +54,26 @@ public class PayrollProcessing {
         return true;
     }
 
+    private boolean isValidDeptCode(String code) {
+        for(int i = 0; i < departmentCodes.length; i++) {
+            if( departmentCodes[i].equals(code) ) {
+                return true;
+            }
+        }
+        System.out.printf(IoFields.invalidDepartmentCodeLog, code);
+        return false;
+    }
+
     private boolean isValidHourlyRate(float rate) {
         if( rate < 0 ) {
+            System.out.println(IoFields.invalidPayRateLog);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidSalary(int salary) {
+        if( salary < 0 ) {
             System.out.println(IoFields.invalidPayRateLog);
             return false;
         }
@@ -81,14 +91,6 @@ public class PayrollProcessing {
         return false;
     }
 
-    private boolean isValidSalary(int salary) {
-        if( salary < 0 ) {
-            System.out.println(IoFields.invalidPayRateLog);
-            return false;
-        }
-        return true;
-    }
-
     private boolean isValidFields(String deptCode, Date date, float rate) {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidHourlyRate(rate);
     }
@@ -101,7 +103,8 @@ public class PayrollProcessing {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
     }
 
-    // AP Doe,Jane CS 7/1/2020 45.9
+    /* -------------- Handler Methods -------------- */
+
     private void handleAddParttime() {
         String name = tokens[1];
         String department = tokens[2];

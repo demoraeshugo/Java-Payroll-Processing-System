@@ -38,12 +38,9 @@ public class Company {
         emplist = newBag;
     }
 
-     public boolean add(Employee employee) {
-        return false;
-        /*
+    public boolean add(Employee employee) {
         // check if employee already in database
-        boolean alreadyExists = find(employee) != -1;
-        if( alreadyExists ) {
+        if(find(employee) != -1) {
             return false;
         }
 
@@ -56,12 +53,40 @@ public class Company {
          numEmployee++;
 
          return true;
-         */
      } //check the profile before adding
 
-    // public boolean remove(Employee employee) { } //maintain the original sequence
+    public boolean remove(Employee employee) {
+        int indexOfEmp = find(employee);
 
-    // public boolean setHours(Employee employee) { } //set working hours for a part time
+        // case employee not found
+        if (indexOfEmp == -1) {
+            return false;
+        }
+
+        for (int i = 0; i < emplist.length; i++) {
+            // last elem will always be null by virtue of one being removed
+            if (i + 1 == emplist.length) {
+                emplist[i] = null;
+                break;
+            }
+            // from the target index to end, shift elements to the left
+            if (i >= indexOfEmp) {
+                emplist[i] = emplist[i + 1];
+            }
+        }
+
+        numEmployee--;
+        return true;
+    } //maintain the original sequence
+
+    public boolean setHours(Employee employee) {
+        int indexOfEmp = find(employee);
+
+        // need to cast to parttime (I think)
+        // emplist[indexOfEmp].setHours(employee.getHours());
+
+        return true;
+    } //set working hours for a part time
 
     public void processPayments() { } //process payments for all employees
 
