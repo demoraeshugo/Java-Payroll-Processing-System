@@ -15,10 +15,30 @@ public class Fulltime extends Employee {
     public int getTotalCompensation() { return totalCompensation; }
 
     @Override
-    public String toString() { return " "; }
+    public String toString() {
+        return super.toString() + "::FULL TIME:: Annual Salary" +this.salary ; }
 
     @Override
-    public boolean equals() { return true; }
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+
+
+        if (!(obj instanceof Fulltime)) {
+            return false;
+        }
+
+        // typecast f to Fulltime so that we can compare data members
+        Fulltime f = (Fulltime) obj;
+        if(super.equals(f) &&
+        this.salary == f.salary){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     @Override
     public void calculatePayment() {
