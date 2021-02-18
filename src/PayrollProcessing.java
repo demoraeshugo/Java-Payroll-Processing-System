@@ -29,25 +29,24 @@ public class PayrollProcessing {
      */
     private void handleUserInput() {
         switch (userInput) {
-            case Commands.addParttime -> handleAddParttime();
-            case Commands.addFulltime -> handleAddFulltime();
-            case Commands.addManager -> handleAddManager();
-            case Commands.removeEmployee -> handleRemoveEmployee();
-            case Commands.calculatePayment -> handleCalculatePayment();
-            case Commands.setHours -> handleSetHours();
-            case Commands.printAll -> handlePrintAll();
-            case Commands.printByHireDate -> handlePrintByHireDate();
-            case Commands.printByDepartment -> handlePrintByDepartment();
-            default -> System.out.printf(IoFields.invalidCommandLog, userInput);
+            case Commands.ADD_PARTTIME -> handleAddParttime();
+            case Commands.ADD_FULLTIME -> handleAddFulltime();
+            case Commands.ADD_MANAGER -> handleAddManager();
+            case Commands.REMOVE_EMPLOYEE -> handleRemoveEmployee();
+            case Commands.CALCULATE_PAYMENT -> handleCalculatePayment();
+            case Commands.SET_HOURS -> handleSetHours();
+            case Commands.PRINT_ALL -> handlePrintAll();
+            case Commands.PRINT_BY_HIRE_DATE -> handlePrintByHireDate();
+            case Commands.PRINT_BY_DEPARTMENT -> handlePrintByDepartment();
+            default -> System.out.printf(IoFields.INVALID_COMMAND_LOG, userInput);
         }
     }
-
 
     /* -------------- Helper Methods -------------- */
 
     private boolean isValidDate(Date date) {
         if(!date.isValid()) {
-            System.out.printf(IoFields.invalidDateLog, date);
+            System.out.printf(IoFields.INVALID_DATE_LOG, date);
             return false;
         }
 
@@ -60,13 +59,13 @@ public class PayrollProcessing {
                 return true;
             }
         }
-        System.out.printf(IoFields.invalidDepartmentCodeLog, code);
+        System.out.printf(IoFields.INVALID_DEPARTMENT_CODE_LOG, code);
         return false;
     }
 
     private boolean isValidHourlyRate(float rate) {
         if( rate < 0 ) {
-            System.out.println(IoFields.invalidPayRateLog);
+            System.out.println(IoFields.INVALID_PAY_RATE_LOG);
             return false;
         }
         return true;
@@ -74,7 +73,7 @@ public class PayrollProcessing {
 
     private boolean isValidSalary(int salary) {
         if( salary < 0 ) {
-            System.out.println(IoFields.invalidPayRateLog);
+            System.out.println(IoFields.INVALID_SALARY_LOG);
             return false;
         }
         return true;
@@ -87,7 +86,7 @@ public class PayrollProcessing {
             }
         }
 
-        System.out.println(IoFields.invalidManagerCodeLog);
+        System.out.println(IoFields.INVALID_MANAGER_CODE_LOG);
         return false;
     }
 
@@ -103,65 +102,71 @@ public class PayrollProcessing {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
     }
 
+    private void addEmployee(Employee employee) {
+        if(!company.add(employee)) {
+            System.out.println(IoFields.EMPLOYEE_ADD_FAILURE_LOG);
+            return;
+        }
+
+        System.out.println(IoFields.EMPLOYEE_ADD_SUCCESS_LOG);
+    }
+
     /* -------------- Handler Methods -------------- */
 
     private void handleAddParttime() {
-        String name = tokens[1];
-        String department = tokens[2];
-        Date dateHired = new Date(tokens[3]);
-        float rate = Float.parseFloat(tokens[4]);
+        // get input fields
+        final String NAME = tokens[1];
+        final String DEPARTMENT = tokens[2];
+        final Date DATE_HIRED = new Date(tokens[3]);
+        final float RATE = Float.parseFloat(tokens[4]);
 
-        if(!isValidFields(department, dateHired, rate)) {
+        // validate entry
+        if(!isValidFields(DEPARTMENT, DATE_HIRED, RATE)) {
             return;
         }
 
-        if(!company.add(new Parttime(name, department, dateHired, rate))) {
-            System.out.println(IoFields.employeeAddFailureLog);
-            return;
-        }
-
-        System.out.println(IoFields.employeeAddSuccessLog);
+        // try add
+        addEmployee(new Parttime(NAME, DEPARTMENT, DATE_HIRED, RATE));
     }
 
     private void handleAddFulltime() {
-        String name = tokens[1];
-        String department = tokens[2];
-        Date dateHired = new Date(tokens[3]);
-        int salary = Integer.parseInt(tokens[4]);
+        // get input fields
+        final String NAME = tokens[1];
+        final String DEPARTMENT = tokens[2];
+        final Date DATE_HIRED = new Date(tokens[3]);
+        final int SALARY = Integer.parseInt(tokens[4]);
 
-        if(!isValidFields(department, dateHired, salary)) {
+        // validate entry
+        if(!isValidFields(DEPARTMENT, DATE_HIRED, SALARY)) {
             return;
         }
 
-        if(!company.add(new Fulltime(name, department, dateHired, salary))) {
-            System.out.println(IoFields.employeeAddFailureLog);
-            return;
-        }
-
-        System.out.println(IoFields.employeeAddSuccessLog);
+        // try add
+        addEmployee(new Fulltime(NAME, DEPARTMENT, DATE_HIRED, SALARY));
     }
 
     private void handleAddManager() {
-        String name = tokens[1];
-        String department = tokens[2];
-        Date dateHired = new Date(tokens[3]);
-        int salary = Integer.parseInt(tokens[4]);
-        int mgmtCode = Integer.parseInt(tokens[5]);
+        // get input fields
+        final String NAME = tokens[1];
+        final String DEPARTMENT = tokens[2];
+        final Date DATE_HIRED = new Date(tokens[3]);
+        final int SALARY = Integer.parseInt(tokens[4]);
+        final int MGMT_CODE = Integer.parseInt(tokens[5]);
 
-        if(!isValidFields(department, dateHired, salary, mgmtCode)) {
+        // validate entry
+        if(!isValidFields(DEPARTMENT, DATE_HIRED, SALARY, MGMT_CODE)) {
             return;
         }
 
-        if(!company.add(new Fulltime(name, department, dateHired, salary))) {
-            System.out.println(IoFields.employeeAddFailureLog);
-            return;
-        }
-
-        System.out.println(IoFields.employeeAddSuccessLog);
+        // try add
+        addEmployee(new Management(NAME, DEPARTMENT, DATE_HIRED, SALARY, MGMT_CODE));
     }
 
+    // Doe,Jane ECE 3/31/2005
     private void handleRemoveEmployee() {
-
+        final String NAME = tokens[1];
+        final String DEPARTMENT = tokens[2];
+        final Date DATE_HIRED = new Date(tokens[3]);
     }
 
     private void handleCalculatePayment() {
@@ -186,16 +191,16 @@ public class PayrollProcessing {
 
     public void run(){
         Scanner scan = new Scanner(System.in);
-        System.out.println(IoFields.startPrompt);
+        System.out.println(IoFields.START_PROMPT);
 
         do {
             tokens = tokenize(scan.nextLine());         //tokenize each line of user input
             userInput = tokens[0];                      //sets userInput to command (A, I, O, R , etc)
-            if (!userInput.equals(Commands.quit)) {
+            if (!userInput.equals(Commands.QUIT)) {
                 handleUserInput();
             }
-        } while (!userInput.equals(Commands.quit));
+        } while (!userInput.equals(Commands.QUIT));
 
-        System.out.println(IoFields.endPrompt);         //when finished with kiosk, end prompt is printed
+        System.out.println(IoFields.END_PROMPT);         //when finished with kiosk, end prompt is printed
     }
 }

@@ -27,5 +27,7 @@ public class Parttime extends Employee{
     public boolean equals() { return true; }
 
     @Override
-    public void calculatePayment() { }
+    public void calculatePayment() {
+
+    }
 }

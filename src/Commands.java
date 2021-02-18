@@ -1,12 +1,12 @@
 public final class Commands {
-    public final static String addParttime = "AP";
-    public final static String addFulltime = "AF";
-    public final static String addManager = "AM";
-    public final static String removeEmployee = "R";
-    public final static String calculatePayment = "C";
-    public final static String setHours = "S";
-    public final static String printAll = "PA";
-    public final static String printByHireDate = "PH";
-    public final static String printByDepartment = "PD";
-    public final static String quit = "Q";
+    public final static String ADD_PARTTIME = "AP";
+    public final static String ADD_FULLTIME = "AF";
+    public final static String ADD_MANAGER = "AM";
+    public final static String REMOVE_EMPLOYEE = "R";
+    public final static String CALCULATE_PAYMENT = "C";
+    public final static String SET_HOURS = "S";
+    public final static String PRINT_ALL = "PA";
+    public final static String PRINT_BY_HIRE_DATE = "PH";
+    public final static String PRINT_BY_DEPARTMENT = "PD";
+    public final static String QUIT = "Q";
 }

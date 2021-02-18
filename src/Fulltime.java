@@ -1,9 +1,18 @@
 public class Fulltime extends Employee {
-    private int salary;
+    private final int SALARY;
+    private final int NUM_PAY_PERIODS = 26;
+    private int totalCompensation;
+
     Fulltime(String name, String department, Date dateHired, int salary) {
         super(name, department, dateHired);
-        this.salary = salary;
+        this.SALARY = salary;
     }
+
+    public int getSalary() { return SALARY; }
+
+    public int getNumPayPeriod() { return NUM_PAY_PERIODS; }
+
+    public int getTotalCompensation() { return totalCompensation; }
 
     @Override
     public String toString() { return " "; }
@@ -12,5 +21,7 @@ public class Fulltime extends Employee {
     public boolean equals() { return true; }
 
     @Override
-    public void calculatePayment() { }
+    public void calculatePayment() {
+        totalCompensation = SALARY * NUM_PAY_PERIODS;
+    }
 }
