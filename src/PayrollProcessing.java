@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class PayrollProcessing {
@@ -63,16 +66,21 @@ public class PayrollProcessing {
         return false;
     }
 
-    private boolean isValidHourlyRate(float rate) {
-        if( rate < 0 ) {
+    private boolean isValidHourlyRate(double rate) {
+        final int HOURLY_RATE_LOWER_BOUND = 0;
+
+        if( rate < HOURLY_RATE_LOWER_BOUND ) {
             System.out.println(IoFields.INVALID_PAY_RATE_LOG);
             return false;
         }
+
         return true;
     }
 
-    private boolean isValidSalary(int salary) {
-        if( salary < 0 ) {
+    private boolean isValidSalary(double salary) {
+        final int SALARY_LOWER_BOUND = 0;
+
+        if( salary < SALARY_LOWER_BOUND ) {
             System.out.println(IoFields.INVALID_SALARY_LOG);
             return false;
         }
@@ -90,16 +98,30 @@ public class PayrollProcessing {
         return false;
     }
 
-    private boolean isValidFields(String deptCode, Date date, float rate) {
-        return isValidDeptCode(deptCode) && isValidDate(date) && isValidHourlyRate(rate);
-    }
+    private boolean isValidHours(int hours) {
+        final int HOURS_LOWER_BOUND = 0;
+        final int HOURS_UPPER_BOUND = 100;
 
-    private boolean isValidFields(String deptCode, Date date, int salary) {
-        return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary);
+        if(hours < HOURS_LOWER_BOUND) {
+            System.out.println(IoFields.SET_NEGATIVE_HOURS_FAILURE_LOG);
+            return false;
+        }
+
+        if(hours > HOURS_UPPER_BOUND) {
+            System.out.println(IoFields.SET_OVER_ONE_HUNDRED_HOURS_FAILURE_LOG);
+            return false;
+        }
+
+        return true;
     }
 
     private boolean isValidFields(String deptCode, Date date, int salary, int mgmtCode ) {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
+    }
+
+    private boolean isValidFields(String deptCode, Date date) {
+
+        return isValidDeptCode(deptCode) && isValidDate(date);
     }
 
     private void addEmployee(Employee employee) {
@@ -118,10 +140,14 @@ public class PayrollProcessing {
         final String NAME = tokens[1];
         final String DEPARTMENT = tokens[2];
         final Date DATE_HIRED = new Date(tokens[3]);
-        final float RATE = Float.parseFloat(tokens[4]);
+        final double RATE = Double.parseDouble(tokens[4]);
 
         // validate entry
-        if(!isValidFields(DEPARTMENT, DATE_HIRED, RATE)) {
+        if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
+            return;
+        }
+
+        if(!isValidHourlyRate(RATE)) {
             return;
         }
 
@@ -134,10 +160,14 @@ public class PayrollProcessing {
         final String NAME = tokens[1];
         final String DEPARTMENT = tokens[2];
         final Date DATE_HIRED = new Date(tokens[3]);
-        final int SALARY = Integer.parseInt(tokens[4]);
+        final double SALARY = Double.parseDouble(tokens[4]);
 
         // validate entry
-        if(!isValidFields(DEPARTMENT, DATE_HIRED, SALARY)) {
+        if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
+            return;
+        }
+
+        if(!isValidSalary(SALARY)) {
             return;
         }
 
@@ -162,23 +192,70 @@ public class PayrollProcessing {
         addEmployee(new Management(NAME, DEPARTMENT, DATE_HIRED, SALARY, MGMT_CODE));
     }
 
-    // Doe,Jane ECE 3/31/2005
+    // R Doe,Jane ECE 3/31/2005
     private void handleRemoveEmployee() {
         final String NAME = tokens[1];
         final String DEPARTMENT = tokens[2];
         final Date DATE_HIRED = new Date(tokens[3]);
+        final Employee targetEmployee = new Employee(NAME, DEPARTMENT, DATE_HIRED);
+
+        if(DBIsEmpty()) {
+            return;
+        }
+
+        if(!company.remove(targetEmployee)) {
+            System.out.println(IoFields.INVALID_EMPLOYEE_LOG);
+            return;
+        }
+
+        System.out.println(IoFields.EMPLOYEE_REMOVE_SUCESS_LOG);
     }
 
     private void handleCalculatePayment() {
+        if(DBIsEmpty()) {
+            return;
+        }
 
+        company.processPayments();
+        System.out.println(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
     }
 
+    // S Doe,John CS 7/1/2020 120
     private void handleSetHours() {
+        if(DBIsEmpty()) {
+            return;
+        }
 
+        final String NAME = tokens[1];
+        final String DEPARTMENT = tokens[2];
+        final Date DATE_HIRED = new Date(tokens[3]);
+        final int HOURS = Integer.parseInt(tokens[4]);
+        final Employee targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED, HOURS);
+
+        // validate department code && hire date
+        if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
+            return;
+        }
+
+        // validate hours
+        if(!isValidHours(HOURS)){
+            return;
+        }
+
+        // try set
+        if(!company.setHours(targetEmployee)) {
+            System.out.println(IoFields.INVALID_EMPLOYEE_LOG);
+        }
+
+        System.out.println(IoFields.SET_HOURS_SUCCESS_LOG);
     }
 
     private void handlePrintAll() {
+        if(DBIsEmpty()) {
+            return;
+        }
 
+        company.print();
     }
 
     private void handlePrintByHireDate() {
@@ -186,7 +263,21 @@ public class PayrollProcessing {
     }
 
     private void handlePrintByDepartment() {
+        if(DBIsEmpty()) {
+            return;
+        }
+            company.printCSDepartment();
+            company.printECEDepartment();
+            company.printITDepartment();
 
+    }
+
+    private boolean DBIsEmpty() {
+        if(company.isEmpty()){
+            System.out.println(IoFields.EMPTY_DB_LOG);
+            return true;
+        }
+        return false;
     }
 
     public void run(){
@@ -202,5 +293,26 @@ public class PayrollProcessing {
         } while (!userInput.equals(Commands.QUIT));
 
         System.out.println(IoFields.END_PROMPT);         //when finished with kiosk, end prompt is printed
+    }
+
+    // Auto input from file
+    public void runTest() {
+        File file = new File("src/testCases.txt");
+        System.out.println(IoFields.START_PROMPT);
+
+        try (Scanner sc = new Scanner(file, StandardCharsets.UTF_8.name())) {
+            do {
+                tokens = tokenize(sc.nextLine());
+                userInput = tokens[0];
+                if(!userInput.equals(Commands.QUIT)){
+                    handleUserInput();
+                }
+            } while(!userInput.equals(Commands.QUIT) && sc.hasNextLine());
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(IoFields.END_PROMPT);
     }
 }

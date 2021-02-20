@@ -1,22 +1,23 @@
 public class Fulltime extends Employee {
-    private final int SALARY;
+    private final Double SALARY;
     private final int NUM_PAY_PERIODS = 26;
-    private int totalCompensation;
 
-    Fulltime(String name, String department, Date dateHired, int salary) {
+    Fulltime(String name, String department, Date dateHired, double salary) {
         super(name, department, dateHired);
         this.SALARY = salary;
     }
 
-    public int getSalary() { return SALARY; }
+    private String getFormattedSalary() {
+        return Employee.formatter.format(SALARY);
+    }
 
     public int getNumPayPeriod() { return NUM_PAY_PERIODS; }
 
-    public int getTotalCompensation() { return totalCompensation; }
-
     @Override
     public String toString() {
-        return super.toString() + "::FULL TIME:: Annual Salary" +this.salary ; }
+        // Doe,Jane::ECE::1/1/2005::Payment $0.00::FULL TIME::Annual Salary $85,000.00
+        return super.toString() + String.format(IoFields.FULLTIME_EMPLOYEE_STRING, super.getFormattedPayment(), getFormattedSalary());
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -24,24 +25,11 @@ public class Fulltime extends Employee {
             return true;
         }
 
-
-        if (!(obj instanceof Fulltime)) {
-            return false;
-        }
-
-        // typecast f to Fulltime so that we can compare data members
-        Fulltime f = (Fulltime) obj;
-        if(super.equals(f) &&
-        this.salary == f.salary){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return super.equals(obj);
     }
 
     @Override
     public void calculatePayment() {
-        totalCompensation = SALARY * NUM_PAY_PERIODS;
+        super.setPayment( SALARY / NUM_PAY_PERIODS);
     }
 }

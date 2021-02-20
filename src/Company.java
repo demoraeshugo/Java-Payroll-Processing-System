@@ -38,6 +38,8 @@ public class Company {
         emplist = newBag;
     }
 
+    // Words as intended, successfully checks for duplicates
+    // check the profile before adding
     public boolean add(Employee employee) {
         // check if employee already in database
         if(find(employee) != -1) {
@@ -49,12 +51,14 @@ public class Company {
              grow();
         }
 
-         emplist[numEmployee] = employee;
-         numEmployee++;
 
-         return true;
-     } //check the profile before adding
+        emplist[numEmployee] = employee;
+        numEmployee++;
 
+        return true;
+     }
+
+    //maintain the original sequence
     public boolean remove(Employee employee) {
         int indexOfEmp = find(employee);
 
@@ -77,23 +81,51 @@ public class Company {
 
         numEmployee--;
         return true;
-    } //maintain the original sequence
+    }
 
+    //set working hours for a part time
     public boolean setHours(Employee employee) {
         int indexOfEmp = find(employee);
 
-        // need to cast to parttime (I think)
-        // emplist[indexOfEmp].setHours(employee.getHours());
+        // case employee not found
+        if (indexOfEmp == -1) {
+            return false;
+        }
+
+        // make sure emp in db is parttime then do rest below
+
+        Parttime current = (Parttime) emplist[indexOfEmp];
+        Parttime target = (Parttime) employee;
+
+        current.setHours(target.getHours());
 
         return true;
-    } //set working hours for a part time
+    }
 
-    public void processPayments() { } //process payments for all employees
+    //process payments for all employees
+    public void processPayments() {
+        for(int i = 0; i < emplist.length; i++) {
+            if(emplist[i] != null) {
+                emplist[i].calculatePayment();
+            }
+        }
+    }
 
-    public void print() { } //print earning statements for all employees
+    //print earning statements for all employees
+    public void print() {
+        for(int i = 0; i < emplist.length; i++) {
+            if(emplist[i] != null) {
+                System.out.println(emplist[i].toString());
+            }
+        }
+    }
 
     public void printByDepartment() { } //print earning statements by department
 
     public void printByDate() { } //print earning statements by date hired
+
+    public boolean isEmpty() {
+        return numEmployee == 0;
+    }
 
 }

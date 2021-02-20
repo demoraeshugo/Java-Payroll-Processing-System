@@ -1,3 +1,7 @@
+/*
+Define the profile of an employee with the following. You cannot add additional instance
+variables and must include toString() and equals() methods.
+ */
 public class Profile {
     private String name; //employee’s name in the form “lastname,firstname”
     private String department; //department code: CS, ECE, IT
@@ -20,13 +24,13 @@ public class Profile {
             return true;
         }
 
-
         if (!(obj instanceof Profile)) {
             return false;
         }
 
         // typecast o to Employee so that we can compare data members
         Profile p = (Profile) obj;
+
         if ( this.name.equals(p.name) &&
                 this.department.equals(p.department) &&
                 this.dateHired.compareTo(p.dateHired) == 0 )
@@ -46,6 +50,6 @@ public class Profile {
     }
 
     public Date getDateHired(){
-        return this.getDateHired();
+        return dateHired;
     }
 }

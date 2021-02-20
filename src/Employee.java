@@ -1,22 +1,22 @@
 public class Employee {
     private final Profile profile;
+    private double payment;
+    static DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
 
     Employee( String name, String department, Date dateHired ) {
-
         profile = new Profile(name, department, dateHired);
     }
 
     @Override
     public String toString() {
-        return (this.profile.getName() +"::"+ this.profile.getDepartment() + "::" + this.profile.getDateHired()+
-                "::Payment " +"replace later w payment") ;
+        return String.format(IoFields.EMPLOYEE_STRING, profile.getName(), profile.getDepartment(), profile.getDateHired());
     }
+
     @Override
     public boolean equals(Object o) {
         if (o == this) {
             return true;
         }
-
 
         if (!(o instanceof Employee)) {
             return false;
@@ -26,14 +26,25 @@ public class Employee {
         Employee e = (Employee) o;
 
         // Compare the data members and return accordingly
-        if ( this.profile.equals(e.profile))
-        {
-        return true;                // two employees are equal only if their profiles are
-        }
-        else {
+        if (profile.equals(e.profile)) {
+            // two employees are equal only if their profiles are
+            return true;
+        } else {
             return false;
         }
     }
 
     public void calculatePayment() { }
+
+    public void setPayment(double amount) {
+        payment = amount;
+    }
+
+    public void addPayment(double amount) {
+        payment += amount;
+    }
+
+    public String getFormattedPayment() {
+        return formatter.format(payment);
+    }
 }
