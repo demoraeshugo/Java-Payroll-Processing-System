@@ -259,6 +259,11 @@ public class PayrollProcessing {
     }
 
     private void handlePrintByHireDate() {
+        // calls company.printByDate()
+        if(DBIsEmpty()) {
+            return;
+        }
+           company.printByDate();
 
     }
 

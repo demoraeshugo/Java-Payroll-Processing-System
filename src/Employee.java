@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Employee {
     private final Profile profile;
     private double payment;
@@ -32,6 +34,10 @@ public class Employee {
         } else {
             return false;
         }
+    }
+
+    public Profile getProfile(){
+        return this.profile;
     }
 
     public void calculatePayment() { }

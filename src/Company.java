@@ -122,7 +122,60 @@ public class Company {
 
     public void printByDepartment() { } //print earning statements by department
 
-    public void printByDate() { } //print earning statements by date hired
+
+    public void sortByDate(){
+        int n = numEmployee;
+
+        // One by one move boundary of unsorted subarray
+        for (int i = 0; i < n - 1; i++) {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++)
+                if (emplist[j].getProfile().getDateHired().compareTo(emplist[min_idx].getProfile().getDateHired()) == -1)
+                    min_idx = j;
+
+            // Swap the found minimum element with the first
+            // element
+            Employee temp = emplist[min_idx];
+            emplist[min_idx] = emplist[i];
+            emplist[i] = temp;
+        }
+
+    }
+    public void printByDate() {
+        if (isEmpty()) {
+            System.out.println(IoFields.EMPTY_DB_LOG);
+        }else {
+            sortByDate();
+            print();
+        }
+
+
+    } //print earning statements by date hired
+
+    public void printCSDepartment(){
+            for(int i = 0; i < emplist.length; i++) {
+                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("CS")) {
+                        System.out.println(emplist[i].toString());
+                    }
+                }
+    }
+
+    public void printITDepartment(){
+        for(int i = 0; i < emplist.length; i++) {
+                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("IT")) {
+                        System.out.println(emplist[i].toString());
+                    }
+                }
+    }
+
+    public void printECEDepartment(){
+        for(int i = 0; i < emplist.length; i++) {
+                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("ECE")) {
+                        System.out.println(emplist[i].toString());
+                    }
+                }
+    }
 
     public boolean isEmpty() {
         return numEmployee == 0;
