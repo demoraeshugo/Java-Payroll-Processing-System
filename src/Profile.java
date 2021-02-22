@@ -15,8 +15,9 @@ public class Profile {
 
     @Override
     public String toString() {
-        return "";
+        return String.format(IoFields.EMPLOYEE_STRING, name, department, dateHired);
     }
+
     @Override
     public boolean equals(Object obj) {
 

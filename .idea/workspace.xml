@@ -1,34 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="Out">
-      <change afterPath="$PROJECT_DIR$/src/testCases.txt" afterDir="false" />
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="More work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Company.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Date.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Fulltime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Fulltime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Parttime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Parttime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Date.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fulltime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fulltime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IoFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parttime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parttime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PayrollProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunProject2.java" afterDir="false" />
     </list>
-    <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PayrollProcessing.java" afterDir="false" />
-    </list>
+    <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,67 +30,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Company.java">
-      <ranges>
-        <range start1="40" end1="40" start2="40" end2="42" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="51" end1="53" start2="53" end2="56" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="54" end1="56" start2="57" end2="59" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="57" end1="57" start2="60" end2="61" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="79" end1="80" start2="83" end2="84" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="81" end1="81" start2="85" end2="86" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="84" end1="86" start2="89" end2="100" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="88" end1="89" start2="102" end2="103" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="90" end1="91" start2="104" end2="112" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="92" end1="93" start2="113" end2="121" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="96" end1="97" start2="124" end2="178" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="98" end1="98" start2="179" end2="183" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/PayrollProcessing.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="3" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="65" end1="67" start2="68" end2="72" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="70" end1="70" start2="75" end2="76" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="73" end1="75" start2="79" end2="83" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="92" end1="95" start2="100" end2="113" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="96" end1="98" start2="114" end2="115" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="104" end1="104" start2="121" end2="126" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="120" end1="121" start2="142" end2="143" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="123" end1="124" start2="145" end2="146" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="126" end1="126" start2="148" end2="152" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="136" end1="137" start2="162" end2="163" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="139" end1="140" start2="165" end2="166" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="142" end1="142" start2="168" end2="172" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="164" end1="165" start2="194" end2="195" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="169" end1="169" start2="199" end2="211" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="172" end1="172" start2="214" end2="217" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="173" end1="173" start2="218" end2="220" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="175" end1="175" start2="222" end2="223" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="176" end1="176" start2="224" end2="243" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="177" end1="177" start2="244" end2="250" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="180" end1="180" start2="253" end2="256" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="181" end1="181" start2="257" end2="258" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="184" end1="184" start2="261" end2="266" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="188" end1="188" start2="270" end2="276" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="190" end1="190" start2="278" end2="286" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="205" end1="205" start2="301" end2="322" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Employee.java">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="2" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="2" end1="2" start2="4" end2="6" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="4" end1="5" start2="8" end2="8" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="10" end1="12" start2="13" end2="14" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="13" end1="13" start2="15" end2="16" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="19" end1="20" start2="22" end2="22" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="28" end1="33" start2="30" end2="34" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="37" end1="37" start2="38" end2="42" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="38" end1="38" start2="43" end2="55" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1oX6NTZrNzxAYEwDwYMb2hHC431" />
   <component name="ProjectLevelVcsManager">
@@ -150,17 +68,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +80,8 @@
       <workItem from="1613420550900" duration="27983000" />
       <workItem from="1613846343377" duration="3166000" />
       <workItem from="1613851280431" duration="3183000" />
-      <workItem from="1613854510093" duration="9852000" />
+      <workItem from="1613854510093" duration="10136000" />
+      <workItem from="1613887242489" duration="907000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -217,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613607913539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Core functions complete">
+      <created>1613865277398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613865277398</updated>
+    </task>
+    <task id="LOCAL-00008" summary="More work">
+      <created>1613865310295</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613865310295</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +164,8 @@
     <MESSAGE value="Added error handling for each type of employee in PayrollProcessing.java" />
     <MESSAGE value="Some more work" />
     <MESSAGE value="Out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Out" />
+    <MESSAGE value="Core functions complete" />
+    <MESSAGE value="More work" />
+    <option name="LAST_COMMIT_MESSAGE" value="More work" />
   </component>
 </project>

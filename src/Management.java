@@ -24,22 +24,21 @@ public class Management extends Fulltime{
             return true;
         }
 
+        Management m = (Management) obj;
+
+        if(m.getRoleCode() != ROLE_CODE) {
+            return false;
+        }
+
         return super.equals(obj);
+    }
 
+    public int getRoleCode() {
+        return ROLE_CODE;
+    }
 
-//        if (!(obj instanceof Management)) {
-//            return false;
-//        }
-//
-//        // typecast f to Fulltime so that we can compare data members
-//        Management m = (Management) obj;
-//        if(super.equals(m) &&
-//                (ROLE_CODE == m.ROLE_CODE)){
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
+    private String getFormattedAdditionalComp() {
+        return Employee.formatter.format(ADDITIONAL_COMP);
     }
 
     @Override
@@ -47,10 +46,4 @@ public class Management extends Fulltime{
         super.calculatePayment();
         super.addPayment(ADDITIONAL_COMP);
     }
-
-    private String getFormattedAdditionalComp() {
-        return Employee.formatter.format(ADDITIONAL_COMP);
-    }
 }
-
-// Doe,Jane::IT::2/28/2012::Payment $3,461.54::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
