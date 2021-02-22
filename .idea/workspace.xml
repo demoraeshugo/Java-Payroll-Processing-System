@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="&#10;Refactored duplicate code">
+      <change afterPath="$PROJECT_DIR$/Top-Level Package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-payroll-processing.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PayrollProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-payroll-processing-system.uml" beforeDir="false" />
     </list>
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +151,9 @@
       <workItem from="1613846343377" duration="3166000" />
       <workItem from="1613851280431" duration="3183000" />
       <workItem from="1613854510093" duration="9852000" />
-      <workItem from="1613981026354" duration="2203000" />
+      <workItem from="1613981026354" duration="2585000" />
+      <workItem from="1614017106535" duration="499000" />
+      <workItem from="1614017620532" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -223,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613982634265</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&#10;Refactored duplicate code">
+      <created>1613983245192</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613983245192</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
