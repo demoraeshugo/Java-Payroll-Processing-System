@@ -45,20 +45,8 @@ public class Management extends Fulltime{
         if (obj == this) {
             return true;
         }
-
-        Management m = (Management) obj;
-
-        if(m.getRoleCode() != roleCode) {
-            return false;
-        }
-
         return super.equals(obj);
     }
-
-    public int getRoleCode() {
-        return roleCode;
-    }
-
 
     /**
      * Overridden calculatePayment method calculates and sets the payment of Management employee
@@ -75,7 +63,6 @@ public class Management extends Fulltime{
      * @return formatted String of additional compensation
      */
     private String getFormattedAdditionalComp() {
-
         return formatter.format(additionalComp);
     }
 }

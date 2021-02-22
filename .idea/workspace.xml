@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="&#10;Refactored project directory for cleaner tests" />
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="&#10;Changes by jonad">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/RunProject2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/RunProject2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/IoFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PayrollProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RunProject2.java" afterDir="false" />
+    </list>
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +93,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CompanyTest">
+  <component name="RunManager" selected="Application.RunProject2">
     <configuration name="RunProject2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="RunProject2" />
       <module name="Java-Payroll-Processing-System" />
@@ -129,8 +139,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CompanyTest" />
         <item itemvalue="JUnit.ManagementTest" />
+        <item itemvalue="JUnit.CompanyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +156,7 @@
       <workItem from="1613846343377" duration="3166000" />
       <workItem from="1613851280431" duration="3183000" />
       <workItem from="1613854510093" duration="9852000" />
+      <workItem from="1613981026354" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -196,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613980933966</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&#10;Added UML diagram">
+      <created>1613981246337</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613981246338</updated>
+    </task>
+    <task id="LOCAL-00009" summary="&#10;Changes by jonad">
+      <created>1613981302817</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613981302817</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +247,9 @@
     <MESSAGE value="Some more work" />
     <MESSAGE value="Out" />
     <MESSAGE value="&#10;Refactored project directory for cleaner tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Refactored project directory for cleaner tests" />
+    <MESSAGE value="&#10;Added UML diagram" />
+    <MESSAGE value="&#10;Changes by jonad" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Changes by jonad" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

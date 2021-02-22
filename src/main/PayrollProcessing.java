@@ -289,7 +289,7 @@ public class PayrollProcessing {
         }
 
         company.processPayments();
-        System.out.println(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
+        System.out.printf(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
     }
 
     // S Doe,John CS 7/1/2020 120
@@ -333,7 +333,7 @@ public class PayrollProcessing {
         if(DBIsEmpty()) {
             return;
         }
-
+        System.out.println(IoFields.PRINT_PROMPT);
         company.print();
     }
 
@@ -345,8 +345,8 @@ public class PayrollProcessing {
         if(DBIsEmpty()) {
             return;
         }
-           company.printByDate();
-
+        System.out.println(IoFields.PRINT_BY_DATE_PROMPT);
+        company.printByDate();
     }
 
     /**
@@ -356,10 +356,10 @@ public class PayrollProcessing {
         if(DBIsEmpty()) {
             return;
         }
-            company.printCSDepartment();
-            company.printECEDepartment();
-            company.printITDepartment();
-
+        System.out.println(IoFields.PRINT_BY_DEPT_PROMPT);
+        company.printCSDepartment();
+        company.printECEDepartment();
+        company.printITDepartment();
     }
 
     /**
@@ -394,7 +394,7 @@ public class PayrollProcessing {
 
     // Auto input from file
     public void runTest() {
-        File file = new File("src/testCases.txt");
+        File file = new File("src/main/testCases.txt");
         System.out.println(IoFields.START_PROMPT);
 
         try (Scanner sc = new Scanner(file, StandardCharsets.UTF_8.name())) {
