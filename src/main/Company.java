@@ -10,6 +10,8 @@ public class Company {
     private Employee[] empList;
     private int numEmployee;
     private final int sizeFactor = 4; // initialize here for use in constructor
+    public static final int HOURS_LOWER_BOUND = 0;
+    public static final int HOURS_UPPER_BOUND = 100;
 
     /**
      * default constructor to create an empty bag with numEmployee = 0
@@ -109,9 +111,6 @@ public class Company {
     }
 
     private boolean isValidHours(int hours) {
-        final int HOURS_LOWER_BOUND = 0;
-        final int HOURS_UPPER_BOUND = 100;
-
         if(hours < HOURS_LOWER_BOUND) {
             System.out.println(IoFields.SET_NEGATIVE_HOURS_FAILURE_LOG);
             return false;
@@ -147,14 +146,6 @@ public class Company {
             }
         }
         return false;
-//        // make sure emp in db is parttime then do rest below
-//
-//        Parttime current = (Parttime) empList[indexOfEmp];
-//        Parttime target = (Parttime) employee;
-//
-//        current.setHours(target.getHours());
-//
-//        return true;
     }
 
     /**
@@ -257,5 +248,4 @@ public class Company {
     public boolean isEmpty() {
         return numEmployee == 0;
     }
-
 }

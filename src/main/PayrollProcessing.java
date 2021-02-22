@@ -75,8 +75,8 @@ public class PayrollProcessing {
      * @return true if code is valid, false otherwise
      */
     private boolean isValidDeptCode(String code) {
-        for(int i = 0; i < departmentCodes.length; i++) {
-            if( departmentCodes[i].equals(code) ) {
+        for (String departmentCode : departmentCodes) {
+            if (departmentCode.equals(code)) {
                 return true;
             }
         }
@@ -121,8 +121,8 @@ public class PayrollProcessing {
      * @return true if code is integer between 1 and 3, false otherwise
      */
     private boolean isValidMgmtCode(int code) {
-        for(int i = 0; i < managerCodes.length; i++) {
-            if( code == managerCodes[i] ) {
+        for (int managerCode : managerCodes) {
+            if (code == managerCode) {
                 return true;
             }
         }
@@ -137,15 +137,13 @@ public class PayrollProcessing {
      * @return true if hours is int between 0 and 100 inclusive, false otherwise
      */
     private boolean isValidHours(int hours) {
-        final int HOURS_LOWER_BOUND = 0;
-        final int HOURS_UPPER_BOUND = 100;
 
-        if(hours < HOURS_LOWER_BOUND) {
+        if(hours < Company.HOURS_LOWER_BOUND) {
             System.out.println(IoFields.SET_NEGATIVE_HOURS_FAILURE_LOG);
             return false;
         }
 
-        if(hours > HOURS_UPPER_BOUND) {
+        if(hours > Company.HOURS_UPPER_BOUND) {
             System.out.println(IoFields.SET_OVER_ONE_HUNDRED_HOURS_FAILURE_LOG);
             return false;
         }
@@ -172,7 +170,6 @@ public class PayrollProcessing {
      * @return true if all are valid, false otherwise
      */
     private boolean isValidFields(String deptCode, Date date) {
-
         return isValidDeptCode(deptCode) && isValidDate(date);
     }
 
@@ -257,8 +254,6 @@ public class PayrollProcessing {
         addEmployee(new Management(NAME, DEPARTMENT, DATE_HIRED, SALARY, MGMT_CODE));
     }
 
-    // R Doe,Jane ECE 3/31/2005
-
     /**
      * handles user input from command line when removing employee
      */
@@ -291,8 +286,6 @@ public class PayrollProcessing {
         company.processPayments();
         System.out.printf(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
     }
-
-    // S Doe,John CS 7/1/2020 120
 
     /**
      * handles user input from command line when setting hours for Parttime employee
@@ -364,7 +357,7 @@ public class PayrollProcessing {
 
     /**
      * helper method to check if company is empty  ( when numemployees = 0 )
-     * @return
+     * @return True if there are no records in data structure/database
      */
     private boolean DBIsEmpty() {
         if(company.isEmpty()){
