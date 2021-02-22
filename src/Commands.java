@@ -1,3 +1,10 @@
+/**
+ * Commands class contains info on each of the console commands available to the user.
+ * For example, an "AP" signifies that the user is attempting to add a Part-time employee
+ *
+ * @author Hugo De Moraes, Jonathan Dong
+ *
+ */
 public final class Commands {
     public final static String ADD_PARTTIME = "AP";
     public final static String ADD_FULLTIME = "AF";

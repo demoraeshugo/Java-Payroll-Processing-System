@@ -1,6 +1,6 @@
 /**
  * IoFields class contains String messages that are used to display info about user commands
- * that are handled by the Kiosk class
+ * that are handled by the PayrollProcessing class
  *
  * @author Hugo De Moraes, Jonathan Dong
  */

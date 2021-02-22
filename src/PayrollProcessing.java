@@ -3,6 +3,14 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+/**
+ *  PayrollProcessing class provides the interface for communicating with a Company object and handles input and output
+ *  by processing commands from the console.This includes dealing with additions/removal to a Company, processing payments,
+ *  printing earnings statements, etc.
+ *
+ *
+ *  @author Hugo De Moraes, Jonathan Dong
+ */
 public class PayrollProcessing {
     private final Company company;
     private String userInput;
@@ -47,6 +55,11 @@ public class PayrollProcessing {
 
     /* -------------- Helper Methods -------------- */
 
+    /**
+     * helper method to determine if given Date object is valid
+     * @param date Date object to be evaluated
+     * @return true if date is valid, false otherwise
+     */
     private boolean isValidDate(Date date) {
         if(!date.isValid()) {
             System.out.printf(IoFields.INVALID_DATE_LOG, date);
@@ -56,6 +69,11 @@ public class PayrollProcessing {
         return true;
     }
 
+    /**
+     * helper method to determine if department code is valid
+     * @param code deptcode to be evaluated
+     * @return true if code is valid, false otherwise
+     */
     private boolean isValidDeptCode(String code) {
         for(int i = 0; i < departmentCodes.length; i++) {
             if( departmentCodes[i].equals(code) ) {
@@ -66,6 +84,11 @@ public class PayrollProcessing {
         return false;
     }
 
+    /**
+     * helper method to determine if hourlyRate is valid
+     * @param rate rate to be evaluated
+     * @return true if rate is greater than 0, false otherwise
+     */
     private boolean isValidHourlyRate(double rate) {
         final int HOURLY_RATE_LOWER_BOUND = 0;
 
@@ -77,6 +100,11 @@ public class PayrollProcessing {
         return true;
     }
 
+    /**
+     * helper method to determine if salary is valid
+     * @param salary salary to be evaluated
+     * @return true if salary is a double greater than 0, false otherwise
+     */
     private boolean isValidSalary(double salary) {
         final int SALARY_LOWER_BOUND = 0;
 
@@ -87,6 +115,11 @@ public class PayrollProcessing {
         return true;
     }
 
+    /**
+     * helper method to determine if management code is valid
+     * @param code code to be evaluated
+     * @return true if code is integer between 1 and 3, false otherwise
+     */
     private boolean isValidMgmtCode(int code) {
         for(int i = 0; i < managerCodes.length; i++) {
             if( code == managerCodes[i] ) {
@@ -98,6 +131,11 @@ public class PayrollProcessing {
         return false;
     }
 
+    /**
+     * helper method to determine if hours are valid
+     * @param hours num of hours to be evaluated
+     * @return true if hours is int between 0 and 100 inclusive, false otherwise
+     */
     private boolean isValidHours(int hours) {
         final int HOURS_LOWER_BOUND = 0;
         final int HOURS_UPPER_BOUND = 100;
@@ -115,15 +153,33 @@ public class PayrollProcessing {
         return true;
     }
 
+    /**
+     * helper method to determine if various fields are valid
+     * @param deptCode department code to be evaluated
+     * @param date date object to be evaluated
+     * @param salary salary to be evaluated
+     * @param mgmtCode management code to be evaluated
+     * @return true if all are valid, false otherwise
+     */
     private boolean isValidFields(String deptCode, Date date, int salary, int mgmtCode ) {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
     }
 
+    /**
+     * helper method to determine if various fields are valid
+     * @param deptCode department code to be evaluated
+     * @param date date object to be evaluated
+     * @return true if all are valid, false otherwise
+     */
     private boolean isValidFields(String deptCode, Date date) {
 
         return isValidDeptCode(deptCode) && isValidDate(date);
     }
 
+    /**
+     * helper method for adding any employee, if true prints success log, if false prints fail log
+     * @param employee Employee object to be added
+     */
     private void addEmployee(Employee employee) {
         if(!company.add(employee)) {
             System.out.println(IoFields.EMPLOYEE_ADD_FAILURE_LOG);
@@ -135,6 +191,9 @@ public class PayrollProcessing {
 
     /* -------------- Handler Methods -------------- */
 
+    /**
+     * processes user input from commmand line when adding a Parttime employee
+     */
     private void handleAddParttime() {
         // get input fields
         final String NAME = tokens[1];
@@ -155,6 +214,9 @@ public class PayrollProcessing {
         addEmployee(new Parttime(NAME, DEPARTMENT, DATE_HIRED, RATE));
     }
 
+    /**
+     * handles user input from command line when adding Fulltime employee
+     */
     private void handleAddFulltime() {
         // get input fields
         final String NAME = tokens[1];
@@ -175,6 +237,9 @@ public class PayrollProcessing {
         addEmployee(new Fulltime(NAME, DEPARTMENT, DATE_HIRED, SALARY));
     }
 
+    /**
+     * handles user input from command line when adding Management employee
+     */
     private void handleAddManager() {
         // get input fields
         final String NAME = tokens[1];
@@ -193,6 +258,10 @@ public class PayrollProcessing {
     }
 
     // R Doe,Jane ECE 3/31/2005
+
+    /**
+     * handles user input from command line when removing employee
+     */
     private void handleRemoveEmployee() {
         final String NAME = tokens[1];
         final String DEPARTMENT = tokens[2];
@@ -211,6 +280,9 @@ public class PayrollProcessing {
         System.out.println(IoFields.EMPLOYEE_REMOVE_SUCESS_LOG);
     }
 
+    /**
+     * handles user input from command line when calculating payment
+     */
     private void handleCalculatePayment() {
         if(DBIsEmpty()) {
             return;
@@ -221,6 +293,10 @@ public class PayrollProcessing {
     }
 
     // S Doe,John CS 7/1/2020 120
+
+    /**
+     * handles user input from command line when setting hours for Parttime employee
+     */
     private void handleSetHours() {
         if(DBIsEmpty()) {
             return;
@@ -230,7 +306,7 @@ public class PayrollProcessing {
         final String DEPARTMENT = tokens[2];
         final Date DATE_HIRED = new Date(tokens[3]);
         final int HOURS = Integer.parseInt(tokens[4]);
-        final Employee targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED, HOURS);
+        final Employee targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED);
 
         // validate department code && hire date
         if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
@@ -243,13 +319,16 @@ public class PayrollProcessing {
         }
 
         // try set
-        if(!company.setHours(targetEmployee)) {
+        if(!company.setHours(targetEmployee, HOURS)) {
             System.out.println(IoFields.INVALID_EMPLOYEE_LOG);
         }
 
         System.out.println(IoFields.SET_HOURS_SUCCESS_LOG);
     }
 
+    /**
+     * handles user input from command line when printing earnings for all employees
+     */
     private void handlePrintAll() {
         if(DBIsEmpty()) {
             return;
@@ -258,6 +337,9 @@ public class PayrollProcessing {
         company.print();
     }
 
+    /**
+     * handles user input from command line when printing earnings statements in order of date hired
+     */
     private void handlePrintByHireDate() {
         // calls company.printByDate()
         if(DBIsEmpty()) {
@@ -267,6 +349,9 @@ public class PayrollProcessing {
 
     }
 
+    /**
+     * handles user input from command line when printing earnings statements grouped by dept
+     */
     private void handlePrintByDepartment() {
         if(DBIsEmpty()) {
             return;
@@ -277,6 +362,10 @@ public class PayrollProcessing {
 
     }
 
+    /**
+     * helper method to check if company is empty  ( when numemployees = 0 )
+     * @return
+     */
     private boolean DBIsEmpty() {
         if(company.isEmpty()){
             System.out.println(IoFields.EMPTY_DB_LOG);
@@ -285,6 +374,9 @@ public class PayrollProcessing {
         return false;
     }
 
+    /**
+     * Readies the payroll processor for user input from command line
+     */
     public void run(){
         Scanner scan = new Scanner(System.in);
         System.out.println(IoFields.START_PROMPT);

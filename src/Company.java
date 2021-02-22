@@ -1,5 +1,13 @@
+/**
+ * Company class is a container class that is designed to hold Employee objects and any subclasses of Employee.
+ * Company also provides a variety of methods to make changes to its bag of Employees such as adding, removing
+ * and processing payments for Employees, as well as different ways of printing the current Employees in the company.
+
+ *
+ * @author Hugo De Moraes, Jonathan Dong
+ */
 public class Company {
-    private Employee[] emplist;
+    private Employee[] empList;
     private int numEmployee;
     private final int sizeFactor = 4; // initialize here for use in constructor
 
@@ -7,14 +15,19 @@ public class Company {
      * default constructor to create an empty bag with numEmployee = 0
      */
     public Company() {
-        emplist = new Employee[sizeFactor];
+        empList = new Employee[sizeFactor];
         numEmployee = 0;
     }
 
+    /**
+     * helper method to find an employee in the bag
+     * @param employee Employee object to be found
+     * @return index of Employee in empList, -1 if Employee is not found
+     */
     private int find(Employee employee) {
         int indexOfEmp = -1;
-        for (int i = 0; i < emplist.length; i++) {
-            if (emplist[i] != null && emplist[i].equals(employee)) {
+        for (int i = 0; i < empList.length; i++) {
+            if (empList[i] != null && empList[i].equals(employee)) {
                 indexOfEmp = i;
                 break;
             }
@@ -23,23 +36,29 @@ public class Company {
     }
 
     /**
-     * helper method to grow the capacity by 4
+     * helper method to grow the capacity of empList by 4
      */
     private void grow() {
         // create new array of length current + 4
-        Employee[] newBag = new Employee[emplist.length + sizeFactor];
+        Employee[] newBag = new Employee[empList.length + sizeFactor];
 
         // copy over all elements from current to new array
-        for (int i = 0; i < emplist.length; i++) {
-            newBag[i] = emplist[i];
+        for (int i = 0; i < empList.length; i++) {
+            newBag[i] = empList[i];
         }
 
         // set new array as the emplist property
-        emplist = newBag;
+        empList = newBag;
     }
 
     // Words as intended, successfully checks for duplicates
     // check the profile before adding
+
+    /**
+     * adds an Employee to the bag, grows bag if needed
+     * @param employee Employee object to be added
+     * @return true if Employee successfully added, false if employee is already in empList
+     */
     public boolean add(Employee employee) {
         // check if employee already in database
         if(find(employee) != -1) {
@@ -47,18 +66,24 @@ public class Company {
         }
 
         // grow data structure if needed
-        if (numEmployee == emplist.length - 1) {
+        if (numEmployee == empList.length - 1) {
              grow();
         }
 
 
-        emplist[numEmployee] = employee;
+        empList[numEmployee] = employee;
         numEmployee++;
 
         return true;
      }
 
     //maintain the original sequence
+
+    /**
+     * removes an Employee if it exists
+     * @param employee Employee object to be removed
+     * @return true if employee is removed successfully, false if employee is not found
+     */
     public boolean remove(Employee employee) {
         int indexOfEmp = find(employee);
 
@@ -67,15 +92,15 @@ public class Company {
             return false;
         }
 
-        for (int i = 0; i < emplist.length; i++) {
+        for (int i = 0; i < empList.length; i++) {
             // last elem will always be null by virtue of one being removed
-            if (i + 1 == emplist.length) {
-                emplist[i] = null;
+            if (i + 1 == empList.length) {
+                empList[i] = null;
                 break;
             }
             // from the target index to end, shift elements to the left
             if (i >= indexOfEmp) {
-                emplist[i] = emplist[i + 1];
+                empList[i] = empList[i + 1];
             }
         }
 
@@ -83,46 +108,81 @@ public class Company {
         return true;
     }
 
-    //set working hours for a part time
-    public boolean setHours(Employee employee) {
+    private boolean isValidHours(int hours) {
+        final int HOURS_LOWER_BOUND = 0;
+        final int HOURS_UPPER_BOUND = 100;
+
+        if(hours < HOURS_LOWER_BOUND) {
+            System.out.println(IoFields.SET_NEGATIVE_HOURS_FAILURE_LOG);
+            return false;
+        }
+
+        if(hours > HOURS_UPPER_BOUND) {
+            System.out.println(IoFields.SET_OVER_ONE_HUNDRED_HOURS_FAILURE_LOG);
+            return false;
+        }
+
+        return true;
+    }
+    /**
+     * sets working hours for a part-time employee
+     * @param employee Employee to set hours
+     * @param hours num hours to set
+     * @return true if hours have successfully been set, false otherwise
+     */
+    public boolean setHours(Employee employee, int hours) {
         int indexOfEmp = find(employee);
 
         // case employee not found
         if (indexOfEmp == -1) {
             return false;
         }
-
-        // make sure emp in db is parttime then do rest below
-
-        Parttime current = (Parttime) emplist[indexOfEmp];
-        Parttime target = (Parttime) employee;
-
-        current.setHours(target.getHours());
-
-        return true;
+        if ( employee instanceof Parttime){
+            if (isValidHours(hours)) {
+                ((Parttime) empList[indexOfEmp]).setHours(hours);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        return false;
+//        // make sure emp in db is parttime then do rest below
+//
+//        Parttime current = (Parttime) empList[indexOfEmp];
+//        Parttime target = (Parttime) employee;
+//
+//        current.setHours(target.getHours());
+//
+//        return true;
     }
 
-    //process payments for all employees
+    /**
+     * processes payments for all employees
+     */
     public void processPayments() {
-        for(int i = 0; i < emplist.length; i++) {
-            if(emplist[i] != null) {
-                emplist[i].calculatePayment();
+        for(int i = 0; i < empList.length; i++) {
+            if(empList[i] != null) {
+                empList[i].calculatePayment();
             }
         }
     }
 
-    //print earning statements for all employees
+    /**
+     * print earning statements for all employees
+     */
     public void print() {
-        for(int i = 0; i < emplist.length; i++) {
-            if(emplist[i] != null) {
-                System.out.println(emplist[i].toString());
+        for(int i = 0; i < empList.length; i++) {
+            if(empList[i] != null) {
+                System.out.println(empList[i].toString());
             }
         }
     }
 
-    public void printByDepartment() { } //print earning statements by department
 
-
+    /**
+     * sorts employees by date of hire
+     */
     public void sortByDate(){
         int n = numEmployee;
 
@@ -131,17 +191,21 @@ public class Company {
             // Find the minimum element in unsorted array
             int min_idx = i;
             for (int j = i + 1; j < n; j++)
-                if (emplist[j].getProfile().getDateHired().compareTo(emplist[min_idx].getProfile().getDateHired()) == -1)
+                if (empList[j].getProfile().getDateHired().compareTo(empList[min_idx].getProfile().getDateHired()) == -1)
                     min_idx = j;
 
             // Swap the found minimum element with the first
             // element
-            Employee temp = emplist[min_idx];
-            emplist[min_idx] = emplist[i];
-            emplist[i] = temp;
+            Employee temp = empList[min_idx];
+            empList[min_idx] = empList[i];
+            empList[i] = temp;
         }
 
     }
+
+    /**
+     * prints earnings statements for all employees in order of hire date
+     */
     public void printByDate() {
         if (isEmpty()) {
             System.out.println(IoFields.EMPTY_DB_LOG);
@@ -151,32 +215,45 @@ public class Company {
         }
 
 
-    } //print earning statements by date hired
+    }
 
+    /**
+     * prints earnings statements only for employees in CS Department
+     */
     public void printCSDepartment(){
-            for(int i = 0; i < emplist.length; i++) {
-                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("CS")) {
-                        System.out.println(emplist[i].toString());
+            for(int i = 0; i < empList.length; i++) {
+                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("CS")) {
+                        System.out.println(empList[i].toString());
                     }
                 }
     }
 
+    /**
+     * prints earnings statements only for employees in IT Department
+     */
     public void printITDepartment(){
-        for(int i = 0; i < emplist.length; i++) {
-                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("IT")) {
-                        System.out.println(emplist[i].toString());
+        for(int i = 0; i < empList.length; i++) {
+                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("IT")) {
+                        System.out.println(empList[i].toString());
                     }
                 }
     }
 
+    /**
+     * prints earnings statements only for employees in ECE Department
+     */
     public void printECEDepartment(){
-        for(int i = 0; i < emplist.length; i++) {
-                    if(emplist[i] != null && emplist[i].getProfile().getDepartment().equals("ECE")) {
-                        System.out.println(emplist[i].toString());
+        for(int i = 0; i < empList.length; i++) {
+                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("ECE")) {
+                        System.out.println(empList[i].toString());
                     }
                 }
     }
 
+    /**
+     * checks if number of employees in Company is 0
+     * @return true if number of employees in company is 0, false otherwise
+     */
     public boolean isEmpty() {
         return numEmployee == 0;
     }
