@@ -23,13 +23,9 @@ public class Profile {
         this.dateHired = dateHired;
     }
 
-    /**
-     * Overriden toString method returns string representation of Profile
-     * @return string containing a profiles, name, department and date hired.
-     */
     @Override
     public String toString() {
-        return (this.name +" " +this.department + " " + this.dateHired);
+        return String.format(IoFields.EMPLOYEE_STRING, name, department, dateHired);
     }
 
     /**

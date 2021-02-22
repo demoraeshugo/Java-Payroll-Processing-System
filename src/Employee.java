@@ -26,7 +26,7 @@ public class Employee {
      */
     @Override
     public String toString() {
-        return String.format(IoFields.EMPLOYEE_STRING, profile.getName(), profile.getDepartment(), profile.getDateHired());
+        return profile.toString();
     }
 
     /**
