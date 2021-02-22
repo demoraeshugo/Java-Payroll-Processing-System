@@ -76,6 +76,6 @@ public class Management extends Fulltime{
      */
     private String getFormattedAdditionalComp() {
 
-        return Employee.formatter.format(additionalComp);
+        return formatter.format(additionalComp);
     }
 }

@@ -61,7 +61,7 @@ public class Parttime extends Employee{
      * @return String representation of hourlyRate to 2 decimals
      */
     private String getFormattedRate() {
-        return Employee.formatter.format(hourlyRate);
+        return formatter.format(hourlyRate);
     }
 
     /**

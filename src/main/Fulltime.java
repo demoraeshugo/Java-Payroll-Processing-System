@@ -23,7 +23,7 @@ public class Fulltime extends Employee {
      * @return String version of salary to 2 decimals
      */
     private String getFormattedSalary() {
-        return Employee.formatter.format(SALARY);
+        return formatter.format(SALARY);
     }
 
     /**
