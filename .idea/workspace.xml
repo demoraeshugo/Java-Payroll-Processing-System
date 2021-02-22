@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="Out">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-Payroll-Processing-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Payroll-Processing-System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Commands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Company.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Date.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Fulltime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Parttime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/RunProject2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/CompanyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fulltime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Fulltime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/IoFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ManagementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parttime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Parttime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PayrollProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RunProject2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testCases.txt" afterDir="false" />
-    </list>
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="&#10;Refactored project directory for cleaner tests" />
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,15 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613607913539</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&#10;Refactored project directory for cleaner tests">
+      <created>1613980933966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613980933966</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +221,8 @@
     <MESSAGE value="Added error handling for each type of employee in PayrollProcessing.java" />
     <MESSAGE value="Some more work" />
     <MESSAGE value="Out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Out" />
+    <MESSAGE value="&#10;Refactored project directory for cleaner tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Refactored project directory for cleaner tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
