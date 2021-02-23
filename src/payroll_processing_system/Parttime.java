@@ -32,9 +32,16 @@ public class Parttime extends Employee {
      * @param department department of Parttime Employee
      * @param dateHired date of Hire of Parttime Employee
      */
-    Parttime(String name, String department, Date dateHired) {
+    Parttime(String name, String department, Date dateHired, int hours) {
         super(name, department, dateHired);
+        this.hours = hours;
     }
+
+    /**
+     * getter method for hours attribute of Parttime employee
+     * @return hours num hours of Parttime employee
+     */
+    public int getHours() { return hours; }
 
     /**
      * setter method for hours attribute of Parttime employee

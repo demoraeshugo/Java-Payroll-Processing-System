@@ -348,7 +348,7 @@ public class PayrollProcessing {
             DEPARTMENT = tokens[2];
             DATE_HIRED = new Date(tokens[3]);
             HOURS = Integer.parseInt(tokens[4]);
-            targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED);
+            targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED, HOURS);
         }
         catch(Exception e) {
             System.out.println(IoFields.MISSING_PARAMS_LOG);
@@ -366,7 +366,7 @@ public class PayrollProcessing {
         }
 
         // try set
-        if(!company.setHours(targetEmployee, HOURS)) {
+        if(!company.setHours(targetEmployee)) {
             System.out.println(IoFields.INVALID_EMPLOYEE_LOG);
         }
 

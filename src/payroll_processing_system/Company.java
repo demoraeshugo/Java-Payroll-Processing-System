@@ -110,42 +110,29 @@ public class Company {
         return true;
     }
 
-    private boolean isValidHours(int hours) {
-        if(hours < HOURS_LOWER_BOUND) {
-            System.out.println(IoFields.SET_NEGATIVE_HOURS_FAILURE_LOG);
-            return false;
-        }
-
-        if(hours > HOURS_UPPER_BOUND) {
-            System.out.println(IoFields.SET_OVER_ONE_HUNDRED_HOURS_FAILURE_LOG);
-            return false;
-        }
-
-        return true;
-    }
     /**
      * sets working hours for a part-time employee
      * @param employee Employee to set hours
-     * @param hours num hours to set
      * @return true if hours have successfully been set, false otherwise
      */
-    public boolean setHours(Employee employee, int hours) {
+    public boolean setHours(Employee employee) {
         int indexOfEmp = find(employee);
 
         // case employee not found
         if (indexOfEmp == -1) {
             return false;
         }
-        if ( employee instanceof Parttime){
-            if (isValidHours(hours)) {
-                ((Parttime) empList[indexOfEmp]).setHours(hours);
-                return true;
-            }
-            else {
-                return false;
-            }
+
+        if(!(employee instanceof Parttime)) {
+            return false;
         }
-        return false;
+
+        final Parttime TARGET_EMPLOYEE = (Parttime) empList[indexOfEmp];
+        final Parttime ARG_EMPLOYEE = (Parttime) employee;
+
+        TARGET_EMPLOYEE.setHours(ARG_EMPLOYEE.getHours());
+
+        return true;
     }
 
     /**
