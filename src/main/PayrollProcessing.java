@@ -15,8 +15,6 @@ public class PayrollProcessing {
     private final Company company;
     private String userInput;
     private String[] tokens;
-    private final String[] departmentCodes = { "CS", "ECE", "IT" };
-    private final int[] managerCodes = { 1, 2, 3 };
 
     /**
      * default constructor for PayrollProcessing
@@ -75,7 +73,7 @@ public class PayrollProcessing {
      * @return true if code is valid, false otherwise
      */
     private boolean isValidDeptCode(String code) {
-        for (String departmentCode : departmentCodes) {
+        for (String departmentCode : Company.departmentCodes) {
             if (departmentCode.equals(code)) {
                 return true;
             }
@@ -121,7 +119,7 @@ public class PayrollProcessing {
      * @return true if code is integer between 1 and 3, false otherwise
      */
     private boolean isValidMgmtCode(int code) {
-        for (int managerCode : managerCodes) {
+        for (int managerCode : Company.managerCodes) {
             if (code == managerCode) {
                 return true;
             }
@@ -334,7 +332,6 @@ public class PayrollProcessing {
      * handles user input from command line when printing earnings statements in order of date hired
      */
     private void handlePrintByHireDate() {
-        // calls company.printByDate()
         if(DBIsEmpty()) {
             return;
         }
@@ -350,9 +347,7 @@ public class PayrollProcessing {
             return;
         }
         System.out.println(IoFields.PRINT_BY_DEPT_PROMPT);
-        company.printCSDepartment();
-        company.printECEDepartment();
-        company.printITDepartment();
+        company.printByDepartment();
     }
 
     /**

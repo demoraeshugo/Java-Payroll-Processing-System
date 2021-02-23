@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="&#10;Refactored duplicate code">
-      <change afterPath="$PROJECT_DIR$/Top-Level Package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-payroll-processing.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-payroll-processing-system.uml" beforeDir="false" />
-    </list>
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="Saved UML as png" />
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +148,7 @@
       <workItem from="1613854510093" duration="9852000" />
       <workItem from="1613981026354" duration="2585000" />
       <workItem from="1614017106535" duration="499000" />
-      <workItem from="1614017620532" duration="37000" />
+      <workItem from="1614017620532" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -232,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613983245192</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Saved UML as png">
+      <created>1614017672543</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1614017672543</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +264,8 @@
     <MESSAGE value="&#10;Changes by jonad" />
     <MESSAGE value="&#10;Clean up, added more IoFields" />
     <MESSAGE value="&#10;Refactored duplicate code" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Refactored duplicate code" />
+    <MESSAGE value="Saved UML as png" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saved UML as png" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,6 +12,8 @@ public class Company {
     private final int sizeFactor = 4; // initialize here for use in constructor
     public static final int HOURS_LOWER_BOUND = 0;
     public static final int HOURS_UPPER_BOUND = 100;
+    public static final String[] departmentCodes = { "CS", "ECE", "IT" };
+    public static final int[] managerCodes = { 1, 2, 3 };
 
     /**
      * default constructor to create an empty bag with numEmployee = 0
@@ -200,23 +202,21 @@ public class Company {
     public void printByDate() {
         if (isEmpty()) {
             System.out.println(IoFields.EMPTY_DB_LOG);
-        }else {
+        } else {
             sortByDate();
             print();
         }
-
-
     }
 
     /**
      * prints earnings statements only for employees in CS Department
      */
     public void printCSDepartment(){
-            for(int i = 0; i < empList.length; i++) {
-                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("CS")) {
-                        System.out.println(empList[i].toString());
-                    }
-                }
+        for(int i = 0; i < empList.length; i++) {
+            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("CS")) {
+                System.out.println(empList[i].toString());
+            }
+        }
     }
 
     /**
@@ -224,10 +224,10 @@ public class Company {
      */
     public void printITDepartment(){
         for(int i = 0; i < empList.length; i++) {
-                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("IT")) {
-                        System.out.println(empList[i].toString());
-                    }
-                }
+            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("IT")) {
+                System.out.println(empList[i].toString());
+            }
+        }
     }
 
     /**
@@ -235,10 +235,19 @@ public class Company {
      */
     public void printECEDepartment(){
         for(int i = 0; i < empList.length; i++) {
-                    if(empList[i] != null && empList[i].getProfile().getDepartment().equals("ECE")) {
-                        System.out.println(empList[i].toString());
-                    }
-                }
+            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("ECE")) {
+                System.out.println(empList[i].toString());
+            }
+        }
+    }
+
+    /**
+     * prints earning statements for all employees by order of department
+     */
+    public void printByDepartment() {
+        printCSDepartment();
+        printECEDepartment();
+        printITDepartment();
     }
 
     /**
