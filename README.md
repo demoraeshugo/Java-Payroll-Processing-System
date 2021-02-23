@@ -10,4 +10,4 @@ including the employee’s name, department and the date hired, assuming there a
 “computer science”, “electrical and computer engineering” and “information technology”. The payroll is processed every
 other week. Calculation of the payments are different depending on an employee’s employment type.
 
-![Web_Frame@2x](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/Top-Level%20Package.png?token=AKZ6UI27JO6YDUXUA7IXI6TAHUXZY)
+![Web_Frame@2x](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll_processing_system.png?token=AKZ6UIYTCYH33IV32J7KNXTAH27VY)
