@@ -1,7 +1,7 @@
+package payroll_processing_system;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Junit test Class for Company
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CompanyTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void add() {
         Company testCompany = new Company();
         Fulltime f1 = new Fulltime("Cena, John", "IT", new Date("3/21/2012"), 50000);
@@ -26,7 +26,7 @@ class CompanyTest {
         Assertions.assertTrue(testCompany.add(m5));//Test Case 3: checks grow method of Company
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void remove() {
      Company testCompany = new Company();
      Fulltime f1 = new Fulltime("Cena, John", "IT", new Date("3/21/2012"), 50000);

@@ -1,6 +1,5 @@
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+package payroll_processing_system;
+
 import java.util.Scanner;
 
 /**
@@ -157,7 +156,7 @@ public class PayrollProcessing {
      * @param mgmtCode management code to be evaluated
      * @return true if all are valid, false otherwise
      */
-    private boolean isValidFields(String deptCode, Date date, int salary, int mgmtCode ) {
+    private boolean isValidFields(String deptCode, Date date, double salary, int mgmtCode ) {
         return isValidDeptCode(deptCode) && isValidDate(date) && isValidSalary(salary) && isValidMgmtCode(mgmtCode);
     }
 
@@ -191,10 +190,21 @@ public class PayrollProcessing {
      */
     private void handleAddParttime() {
         // get input fields
-        final String NAME = tokens[1];
-        final String DEPARTMENT = tokens[2];
-        final Date DATE_HIRED = new Date(tokens[3]);
-        final double RATE = Double.parseDouble(tokens[4]);
+        final String NAME;
+        final String DEPARTMENT;
+        final Date DATE_HIRED;
+        final double RATE;
+
+        try {
+            NAME = tokens[1];
+            DEPARTMENT = tokens[2];
+            DATE_HIRED = new Date(tokens[3]);
+            RATE = Double.parseDouble(tokens[4]);
+        }
+        catch(Exception e) {
+            System.out.println(IoFields.MISSING_PARAMS_LOG);
+            return;
+        }
 
         // validate entry
         if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
@@ -214,10 +224,21 @@ public class PayrollProcessing {
      */
     private void handleAddFulltime() {
         // get input fields
-        final String NAME = tokens[1];
-        final String DEPARTMENT = tokens[2];
-        final Date DATE_HIRED = new Date(tokens[3]);
-        final double SALARY = Double.parseDouble(tokens[4]);
+        final String NAME;
+        final String DEPARTMENT;
+        final Date DATE_HIRED;
+        final double SALARY;
+
+        try {
+            NAME = tokens[1];
+            DEPARTMENT = tokens[2];
+            DATE_HIRED = new Date(tokens[3]);
+            SALARY = Double.parseDouble(tokens[4]);
+        }
+        catch(Exception e) {
+            System.out.println(IoFields.MISSING_PARAMS_LOG);
+            return;
+        }
 
         // validate entry
         if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
@@ -237,11 +258,23 @@ public class PayrollProcessing {
      */
     private void handleAddManager() {
         // get input fields
-        final String NAME = tokens[1];
-        final String DEPARTMENT = tokens[2];
-        final Date DATE_HIRED = new Date(tokens[3]);
-        final int SALARY = Integer.parseInt(tokens[4]);
-        final int MGMT_CODE = Integer.parseInt(tokens[5]);
+        final String NAME;
+        final String DEPARTMENT;
+        final Date DATE_HIRED;
+        final double SALARY;
+        final int MGMT_CODE;
+
+        try {
+            NAME = tokens[1];
+            DEPARTMENT = tokens[2];
+            DATE_HIRED = new Date(tokens[3]);
+            SALARY = Double.parseDouble(tokens[4]);
+            MGMT_CODE = Integer.parseInt(tokens[5]);
+        }
+        catch(Exception e) {
+            System.out.println(IoFields.MISSING_PARAMS_LOG);
+            return;
+        }
 
         // validate entry
         if(!isValidFields(DEPARTMENT, DATE_HIRED, SALARY, MGMT_CODE)) {
@@ -256,10 +289,21 @@ public class PayrollProcessing {
      * handles user input from command line when removing employee
      */
     private void handleRemoveEmployee() {
-        final String NAME = tokens[1];
-        final String DEPARTMENT = tokens[2];
-        final Date DATE_HIRED = new Date(tokens[3]);
-        final Employee targetEmployee = new Employee(NAME, DEPARTMENT, DATE_HIRED);
+        final String NAME;
+        final String DEPARTMENT;
+        final Date DATE_HIRED;
+        final Employee targetEmployee;
+
+        try {
+            NAME = tokens[1];
+            DEPARTMENT = tokens[2];
+            DATE_HIRED = new Date(tokens[3]);
+            targetEmployee = new Employee(NAME, DEPARTMENT, DATE_HIRED);
+        }
+        catch(Exception e) {
+            System.out.println(IoFields.MISSING_PARAMS_LOG);
+            return;
+        }
 
         if(DBIsEmpty()) {
             return;
@@ -282,7 +326,7 @@ public class PayrollProcessing {
         }
 
         company.processPayments();
-        System.out.printf(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
+        System.out.println(IoFields.PAYMENT_PROCESS_COMPLETE_LOG);
     }
 
     /**
@@ -293,11 +337,23 @@ public class PayrollProcessing {
             return;
         }
 
-        final String NAME = tokens[1];
-        final String DEPARTMENT = tokens[2];
-        final Date DATE_HIRED = new Date(tokens[3]);
-        final int HOURS = Integer.parseInt(tokens[4]);
-        final Employee targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED);
+        final String NAME;
+        final String DEPARTMENT;
+        final Date DATE_HIRED;
+        final int HOURS;
+        final Employee targetEmployee;
+
+        try {
+            NAME = tokens[1];
+            DEPARTMENT = tokens[2];
+            DATE_HIRED = new Date(tokens[3]);
+            HOURS = Integer.parseInt(tokens[4]);
+            targetEmployee = new Parttime(NAME, DEPARTMENT, DATE_HIRED);
+        }
+        catch(Exception e) {
+            System.out.println(IoFields.MISSING_PARAMS_LOG);
+            return;
+        }
 
         // validate department code && hire date
         if(!isValidFields(DEPARTMENT, DATE_HIRED)) {
@@ -335,7 +391,7 @@ public class PayrollProcessing {
         if(DBIsEmpty()) {
             return;
         }
-        System.out.println(IoFields.PRINT_BY_DATE_PROMPT);
+        System.out.printf(IoFields.PRINT_BY_DATE_PROMPT);
         company.printByDate();
     }
 
@@ -346,7 +402,7 @@ public class PayrollProcessing {
         if(DBIsEmpty()) {
             return;
         }
-        System.out.println(IoFields.PRINT_BY_DEPT_PROMPT);
+        System.out.printf(IoFields.PRINT_BY_DEPT_PROMPT);
         company.printByDepartment();
     }
 
@@ -378,26 +434,5 @@ public class PayrollProcessing {
         } while (!userInput.equals(Commands.QUIT));
 
         System.out.println(IoFields.END_PROMPT);         //when finished with kiosk, end prompt is printed
-    }
-
-    // Auto input from file
-    public void runTest() {
-        File file = new File("src/main/testCases.txt");
-        System.out.println(IoFields.START_PROMPT);
-
-        try (Scanner sc = new Scanner(file, StandardCharsets.UTF_8.name())) {
-            do {
-                tokens = tokenize(sc.nextLine());
-                userInput = tokens[0];
-                if(!userInput.equals(Commands.QUIT)){
-                    handleUserInput();
-                }
-            } while(!userInput.equals(Commands.QUIT) && sc.hasNextLine());
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(IoFields.END_PROMPT);
     }
 }

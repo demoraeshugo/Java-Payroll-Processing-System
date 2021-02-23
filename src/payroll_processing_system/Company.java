@@ -1,8 +1,9 @@
+package payroll_processing_system;
+
 /**
  * Company class is a container class that is designed to hold Employee objects and any subclasses of Employee.
  * Company also provides a variety of methods to make changes to its bag of Employees such as adding, removing
  * and processing payments for Employees, as well as different ways of printing the current Employees in the company.
-
  *
  * @author Hugo De Moraes, Jonathan Dong
  */
@@ -54,9 +55,6 @@ public class Company {
         // set new array as the emplist property
         empList = newBag;
     }
-
-    // Words as intended, successfully checks for duplicates
-    // check the profile before adding
 
     /**
      * adds an Employee to the bag, grows bag if needed

@@ -2,31 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="Saved UML as png">
+      <change afterPath="$PROJECT_DIR$/Top-Level Package.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-Payroll-Processing-System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Payroll-Processing-System.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Top-Level Package.png" beforeDir="false" afterPath="$PROJECT_DIR$/Top-Level Package.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-payroll-processing.uml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Company.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Fulltime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Fulltime.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/IoFields.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Management.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Parttime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Parttime.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/PayrollProcessing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Fulltime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Fulltime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/IoFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Parttime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Parttime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PayrollProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/RunProject2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/RunProject2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Java-Payroll-Processing-System/CompanyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Java-Payroll-Processing-System/CompanyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Java-Payroll-Processing-System/ManagementTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Java-Payroll-Processing-System/ManagementTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Fulltime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Fulltime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/IoFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Management.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Parttime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Parttime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/PayrollProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/RunProject2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/RunProject2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/testCases.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/CompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payroll_processing_system/CompanyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/payroll_processing_system/ManagementTest.java" afterDir="false" />
     </list>
-    <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Fulltime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Fulltime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Parttime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Parttime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/PayrollProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Profile.java" afterDir="false" />
-    </list>
+    <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,79 +62,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/Parttime.java">
-      <ranges>
-        <range start1="1" end1="2" start2="1" end2="2" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="3" end1="3" start2="3" end2="5" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="8" end1="9" start2="10" end2="10" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="21" end1="22" start2="22" end2="24" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="32" end1="34" start2="34" end2="34" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="35" end1="40" start2="35" end2="35" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="46" end1="47" start2="41" end2="41" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="50" end1="66" start2="44" end2="44" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="73" end1="74" start2="51" end2="52" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="96" end1="96" start2="74" end2="75" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/Employee.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="8" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="8" end1="9" start2="10" end2="11" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="10" end1="11" start2="12" end2="13" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="23" end1="24" start2="25" end2="26" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="32" end1="33" start2="34" end2="35" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="50" end1="56" start2="52" end2="54" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="70" end1="73" start2="68" end2="69" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="95" end1="96" start2="91" end2="92" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="97" end1="97" start2="93" end2="100" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/Management.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="5" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="5" end1="8" start2="7" end2="9" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="9" end1="10" start2="10" end2="11" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="22" end1="23" start2="23" end2="23" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="24" end1="25" start2="24" end2="25" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="34" end1="35" start2="34" end2="35" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="52" end1="53" start2="52" end2="53" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="59" end1="67" start2="59" end2="59" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/PayrollProcessing.java">
-      <ranges>
-        <range start1="14" end1="15" start2="14" end2="15" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="75" end1="76" start2="75" end2="76" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="121" end1="122" start2="121" end2="122" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="189" end1="190" start2="189" end2="190" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="272" end1="273" start2="272" end2="273" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/Fulltime.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="5" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="5" end1="6" start2="7" end2="8" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="17" end1="18" start2="19" end2="20" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="19" end1="27" start2="21" end2="21" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="37" end1="38" start2="31" end2="32" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="43" end1="44" start2="37" end2="38" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="47" end1="48" start2="41" end2="42" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="61" end1="62" start2="55" end2="56" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="66" end1="67" start2="60" end2="61" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/Profile.java">
-      <ranges>
-        <range start1="0" end1="5" start2="0" end2="0" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="7" end1="7" start2="2" end2="4" changelist="35bf2160-7b41-40d2-87a9-a361fac2210f" />
-        <range start1="17" end1="18" start2="14" end2="15" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="31" end1="32" start2="28" end2="29" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="49" end1="50" start2="46" end2="48" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-        <range start1="51" end1="66" start2="49" end2="50" changelist="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectId" id="1oX6NTZrNzxAYEwDwYMb2hHC431" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -155,7 +87,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/payroll_processing_system/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -164,10 +97,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.23007247" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src/payroll_processing_system" />
+      <recent name="$PROJECT_DIR$/src/payroll-processing-system" />
+      <recent name="$PROJECT_DIR$/src/java-payroll-processing-system" />
+      <recent name="$PROJECT_DIR$/src/com" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/main" />
       <recent name="$PROJECT_DIR$/src/main" />
@@ -176,33 +116,39 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="payroll_processing_system" />
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.RunProject2">
     <configuration name="RunProject2" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="RunProject2" />
+      <option name="MAIN_CLASS_NAME" value="payroll_processing_system.RunProject2" />
       <module name="Java-Payroll-Processing-System" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CompanyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java-Payroll-Processing-System" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CompanyTest" />
+      <option name="PACKAGE_NAME" value="payroll_processing_system" />
+      <option name="MAIN_CLASS_NAME" value="payroll_processing_system.CompanyTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -211,8 +157,8 @@
     </configuration>
     <configuration name="ManagementTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java-Payroll-Processing-System" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ManagementTest" />
+      <option name="PACKAGE_NAME" value="payroll_processing_system" />
+      <option name="MAIN_CLASS_NAME" value="payroll_processing_system.ManagementTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -247,7 +193,8 @@
       <workItem from="1614017106535" duration="499000" />
       <workItem from="1614017620532" duration="237000" />
       <workItem from="1614108150564" duration="2627000" />
-      <workItem from="1614111808568" duration="2165000" />
+      <workItem from="1614111808568" duration="5557000" />
+      <workItem from="1614117566613" duration="1303000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -347,7 +294,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614108567189</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Clean up">
+      <created>1614114058993</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614114058994</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Clean up">
+      <created>1614114085969</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614114085969</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +340,8 @@
     <MESSAGE value="&#10;Refactored duplicate code" />
     <MESSAGE value="Saved UML as png" />
     <MESSAGE value="Refactored departmentCodes &amp; managerCodes to static final of Company, group printBy functions into single method of Company" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored departmentCodes &amp; managerCodes to static final of Company, group printBy functions into single method of Company" />
+    <MESSAGE value="Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

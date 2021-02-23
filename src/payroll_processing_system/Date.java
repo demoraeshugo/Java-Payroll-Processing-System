@@ -1,4 +1,4 @@
-/*
+package payroll_processing_system;/*
 Import this class from your Project 1. The class implements the Java Interface Comparable. You
 must implement the overriding comareTo() method,
  */

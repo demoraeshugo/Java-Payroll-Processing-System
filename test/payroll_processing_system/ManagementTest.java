@@ -1,7 +1,7 @@
+package payroll_processing_system;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Test class for Management Class

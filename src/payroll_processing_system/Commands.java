@@ -1,3 +1,5 @@
+package payroll_processing_system;
+
 /**
  * Commands class contains info on each of the console commands available to the user.
  * For example, an "AP" signifies that the user is attempting to add a Part-time employee

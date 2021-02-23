@@ -1,3 +1,5 @@
+package payroll_processing_system;
+
 /**
  * RunProject2 class is a simple driver class to display the functionality of Project 2
  *
@@ -5,6 +7,6 @@
  */
 public class RunProject2 {
     public static void main(String[] args) {
-        new PayrollProcessing().runTest();
+        new PayrollProcessing().run();
     }
 }

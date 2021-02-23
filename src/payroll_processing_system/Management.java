@@ -1,10 +1,12 @@
+package payroll_processing_system;
+
 /**
  * Management class is a child class of Fulltime and represents a Management Employee with additional instance variables
  * roleName, roleCode, and additionalComp.
  *
  * @author Hugo De Moraes, Jonathan Dong
  */
-public class Management extends Fulltime{
+public class Management extends Fulltime {
     private String roleName;
     private double additionalComp;
     private final String[] ROLES = { "Manager", "Department Head", "Director" };
@@ -19,7 +21,7 @@ public class Management extends Fulltime{
      * @param salary salary of Management employee
      * @param mgmtCode roleCode of Management employee, 1 for Manager, 2 for Department Head and 3 for Director
      */
-    Management(String name, String department, Date dateHired, int salary, int mgmtCode) {
+    Management(String name, String department, Date dateHired, double salary, int mgmtCode) {
         super(name, department, dateHired, salary);
         roleName = ROLES[mgmtCode-1];
         additionalComp = ROLE_BONUSES[mgmtCode-1] / super.getNumPayPeriod();

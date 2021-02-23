@@ -1,3 +1,5 @@
+package payroll_processing_system;
+
 /**
  * Fulltime Class is a child class of Employee, and represents a Full-time employee with additional instance variable
  * Salary.
@@ -5,7 +7,7 @@
  * @author Hugo De Moraes, Jonathan Dong
  */
 public class Fulltime extends Employee {
-    private Double salary;
+    private double salary;
     private final int NUM_PAY_PERIODS = 26;
 
     /**

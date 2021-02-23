@@ -1,10 +1,12 @@
+package payroll_processing_system;
+
 /**
  *   Parttime is a child class of Employee, and represents a Part-time employee with additional instance variables
  *   hourlyRate, overtimeRate, and hours
  *
  *   @author Hugo De Moraes, Jonathan Dong
  */
-public class Parttime extends Employee{
+public class Parttime extends Employee {
     private double hourlyRate;
     private double overtimeRate;
     private int hours;
