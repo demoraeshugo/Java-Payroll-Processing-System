@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>payroll_processing_system</OriginalElement>
+  <nodes>
+    <node x="566.4759002057613" y="131.0">payroll_processing_system.Date</node>
+    <node x="1064.2474537037037" y="1659.5">payroll_processing_system.Commands</node>
+    <node x="361.2298868312758" y="2136.0">payroll_processing_system.PayrollProcessing</node>
+    <node x="444.2298868312758" y="2792.0">payroll_processing_system.RunProject2</node>
+    <node x="730.0009002057612" y="1276.0">payroll_processing_system.Fulltime</node>
+    <node x="54.10586419753099" y="1254.0">payroll_processing_system.Parttime</node>
+    <node x="284.50923353909457" y="1515.0">payroll_processing_system.Company</node>
+    <node x="137.47590020576126" y="0.0">payroll_processing_system.IoFields</node>
+    <node x="369.9808641975309" y="722.0">payroll_processing_system.Profile</node>
+    <node x="566.5092335390946" y="1680.5">payroll_processing_system.Management</node>
+    <node x="401.18423353909463" y="939.0">payroll_processing_system.Employee</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Company">
+      <point x="-96.25" y="-303.0" />
+      <point x="429.9798868312758" y="2096.0" />
+      <point x="326.17590020576125" y="2096.0" />
+      <point x="-83.33333333333331" y="270.5" />
+    </edge>
+    <edge source="payroll_processing_system.Fulltime" target="payroll_processing_system.Date">
+      <point x="103.125" y="-83.5" />
+      <point x="970.6259002057612" y="1234.0" />
+      <point x="956.2499228395061" y="1234.0" />
+      <point x="956.2499228395061" y="622.0" />
+      <point x="703.6981224279834" y="622.0" />
+      <point x="42.22222222222217" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.Management" target="payroll_processing_system.Date">
+      <point x="0.0" y="-105.0" />
+      <point x="732.0092335390946" y="1490.0" />
+      <point x="719.5009002057612" y="1490.0" />
+      <point x="719.5009002057612" y="642.0" />
+      <point x="682.5870113168723" y="642.0" />
+      <point x="21.111111111111086" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.Parttime" target="payroll_processing_system.IoFields">
+      <point x="-104.625" y="-105.5" />
+      <point x="88.98086419753099" y="1234.0" />
+      <point x="87.80923353909463" y="1234.0" />
+      <point x="87.80923353909463" y="652.0" />
+      <point x="239.72590020576126" y="652.0" />
+      <point x="-102.25" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.Fulltime" target="payroll_processing_system.Employee">
+      <point x="-34.375" y="-83.5" />
+      <point x="833.1259002057612" y="1214.0" />
+      <point x="627.2842335390947" y="1214.0" />
+      <point x="107.10000000000002" y="127.5" />
+    </edge>
+    <edge source="payroll_processing_system.Company" target="payroll_processing_system.Employee">
+      <point x="20.833333333333314" y="-270.5" />
+      <point x="430.34256687242794" y="1234.0" />
+      <point x="460.68423353909463" y="1234.0" />
+      <point x="-59.5" y="127.5" />
+    </edge>
+    <edge source="payroll_processing_system.Profile" target="payroll_processing_system.IoFields">
+      <point x="-72.66666666666669" y="-83.5" />
+      <point x="406.3141975308642" y="652.0" />
+      <point x="376.0592335390946" y="652.0" />
+      <point x="34.083333333333314" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.Management" target="payroll_processing_system.IoFields">
+      <point x="-66.19999999999993" y="-105.0" />
+      <point x="665.8092335390946" y="1490.0" />
+      <point x="696.2082561728395" y="1490.0" />
+      <point x="696.2082561728395" y="652.0" />
+      <point x="444.22590020576126" y="652.0" />
+      <point x="102.25" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Commands">
+      <point x="151.25" y="-303.0" />
+      <point x="677.4798868312757" y="2116.0" />
+      <point x="1185.7474537037037" y="2116.0" />
+      <point x="0.0" y="126.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Employee">
+      <point x="-13.75" y="-303.0" />
+      <point x="512.4798868312757" y="2106.0" />
+      <point x="545.0092335390946" y="2106.0" />
+      <point x="545.0092335390946" y="1234.0" />
+      <point x="532.0842335390946" y="1234.0" />
+      <point x="11.899999999999977" y="127.5" />
+    </edge>
+    <edge source="payroll_processing_system.Company" target="payroll_processing_system.Parttime">
+      <point x="-104.16666666666663" y="-270.5" />
+      <point x="305.34256687242794" y="1490.0" />
+      <point x="263.355864197531" y="1490.0" />
+      <point x="69.75" y="105.5" />
+    </edge>
+    <edge source="payroll_processing_system.Parttime" target="payroll_processing_system.Date">
+      <point x="-34.875" y="-105.5" />
+      <point x="158.730864197531" y="1234.0" />
+      <point x="129.35586419753093" y="1234.0" />
+      <point x="129.35586419753093" y="662.0" />
+      <point x="577.0314557613168" y="662.0" />
+      <point x="-84.44444444444446" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.IoFields">
+      <point x="-151.25" y="-303.0" />
+      <point x="374.9798868312758" y="2116.0" />
+      <point x="0.0" y="2116.0" />
+      <point x="0.0" y="642.0" />
+      <point x="171.55923353909458" y="642.0" />
+      <point x="-170.41666666666669" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.Management" target="payroll_processing_system.Employee">
+      <point x="-132.39999999999998" y="-105.0" />
+      <point x="599.6092335390946" y="1490.0" />
+      <point x="602.7557870370371" y="1490.0" />
+      <point x="602.7557870370371" y="1234.0" />
+      <point x="579.6842335390947" y="1234.0" />
+      <point x="59.500000000000114" y="127.5" />
+    </edge>
+    <edge source="payroll_processing_system.Company" target="payroll_processing_system.IoFields">
+      <point x="-62.5" y="-270.5" />
+      <point x="347.00923353909457" y="1490.0" />
+      <point x="343.60586419753093" y="1490.0" />
+      <point x="343.60586419753093" y="652.0" />
+      <point x="307.8925668724279" y="652.0" />
+      <point x="-34.08333333333337" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.Profile" target="payroll_processing_system.Date">
+      <point x="0.0" y="-83.5" />
+      <point x="478.9808641975309" y="682.0" />
+      <point x="619.2536779835391" y="682.0" />
+      <point x="-42.22222222222217" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.Employee" target="payroll_processing_system.Date">
+      <point x="89.25" y="-127.5" />
+      <point x="609.4342335390946" y="914.0" />
+      <point x="644.5632201646091" y="914.0" />
+      <point x="644.5632201646091" y="702.0" />
+      <point x="661.4759002057613" y="702.0" />
+      <point x="0.0" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.Management" target="payroll_processing_system.Fulltime">
+      <point x="66.20000000000005" y="-105.0" />
+      <point x="798.2092335390946" y="1490.0" />
+      <point x="775.8342335390946" y="1490.0" />
+      <point x="-91.66666666666663" y="83.5" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Parttime">
+      <point x="-123.75" y="-303.0" />
+      <point x="402.4798868312758" y="2106.0" />
+      <point x="123.85586419753093" y="2106.0" />
+      <point x="-69.75" y="105.5" />
+    </edge>
+    <edge source="payroll_processing_system.RunProject2" target="payroll_processing_system.PayrollProcessing">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="303.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Date">
+      <point x="123.75" y="-303.0" />
+      <point x="649.9798868312757" y="2106.0" />
+      <point x="1053.7474537037037" y="2106.0" />
+      <point x="1053.7474537037037" y="602.0" />
+      <point x="745.9203446502057" y="602.0" />
+      <point x="84.44444444444446" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Management">
+      <point x="41.25" y="-303.0" />
+      <point x="567.4798868312757" y="2076.0" />
+      <point x="732.0092335390946" y="2076.0" />
+      <point x="0.0" y="105.0" />
+    </edge>
+    <edge source="payroll_processing_system.Parttime" target="payroll_processing_system.Employee">
+      <point x="104.625" y="-105.5" />
+      <point x="298.230864197531" y="1224.0" />
+      <point x="436.88423353909457" y="1224.0" />
+      <point x="-83.30000000000001" y="127.5" />
+    </edge>
+    <edge source="payroll_processing_system.Employee" target="payroll_processing_system.Profile">
+      <point x="-89.25" y="-127.5" />
+      <point x="430.93423353909463" y="914.0" />
+      <point x="406.3141975308642" y="914.0" />
+      <point x="-72.66666666666669" y="83.5" />
+    </edge>
+    <edge source="payroll_processing_system.Fulltime" target="payroll_processing_system.IoFields">
+      <point x="34.375" y="-83.5" />
+      <point x="901.8759002057612" y="1234.0" />
+      <point x="929.1224537037037" y="1234.0" />
+      <point x="929.1224537037037" y="632.0" />
+      <point x="512.392566872428" y="632.0" />
+      <point x="170.41666666666674" y="291.0" />
+    </edge>
+    <edge source="payroll_processing_system.Company" target="payroll_processing_system.Date">
+      <point x="-20.83333333333337" y="-270.5" />
+      <point x="388.6759002057612" y="1490.0" />
+      <point x="354.60586419753093" y="1490.0" />
+      <point x="354.60586419753093" y="672.0" />
+      <point x="598.1425668724279" y="672.0" />
+      <point x="-63.33333333333337" y="160.0" />
+    </edge>
+    <edge source="payroll_processing_system.PayrollProcessing" target="payroll_processing_system.Fulltime">
+      <point x="68.75" y="-303.0" />
+      <point x="594.9798868312757" y="2086.0" />
+      <point x="954.7092335390946" y="2086.0" />
+      <point x="954.7092335390946" y="1490.0" />
+      <point x="959.167566872428" y="1490.0" />
+      <point x="91.66666666666674" y="83.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4" x="917.5" y="1273.75" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
