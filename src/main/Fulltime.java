@@ -3,7 +3,7 @@
  * Salary.
  */
 public class Fulltime extends Employee {
-    private final Double SALARY;
+    private Double salary;
     private final int NUM_PAY_PERIODS = 26;
 
     /**
@@ -15,15 +15,7 @@ public class Fulltime extends Employee {
      */
     Fulltime(String name, String department, Date dateHired, double salary) {
         super(name, department, dateHired);
-        this.SALARY = salary;
-    }
-
-    /**
-     * getter method that returns formatted string representing a Fulltime's salary
-     * @return String version of salary to 2 decimals
-     */
-    private String getFormattedSalary() {
-        return formatter.format(SALARY);
+        this.salary = salary;
     }
 
     /**
@@ -35,17 +27,17 @@ public class Fulltime extends Employee {
     }
 
     /**
-     * Overriden toString method converts a Fulltime to its String representation
+     * Overridden toString method converts a Fulltime to its String representation
      * @return a formatted String containing name, department, dateHired, and Salary
      */
     @Override
     public String toString() {
         // Doe,Jane::ECE::1/1/2005::Payment $0.00::FULL TIME::Annual Salary $85,000.00
-        return super.toString() + String.format(IoFields.FULLTIME_EMPLOYEE_STRING, super.getFormattedPayment(), getFormattedSalary());
+        return super.toString() + String.format(IoFields.FULLTIME_EMPLOYEE_STRING, super.getFormattedPayment(), useFormatter(salary));
     }
 
     /**
-     * Overriden equals method to determine if two Fulltimes are equal
+     * Overridden equals method to determine if two Fulltimes are equal
      * @param obj Fulltime Employee to be evaluated for equality
      * @return true if profiles of Employee are equal and salaries are equal
      */
@@ -59,11 +51,11 @@ public class Fulltime extends Employee {
     }
 
     /**
-     * Overriden calculatePayment method calculates and sets the payment of Fulltime employee
+     * Overridden calculatePayment method calculates and sets the payment of Fulltime employee
      * sets payment as Salary/ number of pay periods
      */
     @Override
     public void calculatePayment() {
-        super.setPayment( SALARY / NUM_PAY_PERIODS);
+        super.setPayment( salary / NUM_PAY_PERIODS);
     }
 }

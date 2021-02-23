@@ -1,12 +1,11 @@
 /**
- * Parttime is a child class of Employee, and represents a Part-time employee with additional instance variables
+ *   Parttime is a child class of Employee, and represents a Part-time employee with additional instance variables
  *   hourlyRate, overtimeRate, and hours
  */
 public class Parttime extends Employee{
     private double hourlyRate;
     private double overtimeRate;
     private int hours;
-    private final int OVERTIME_THRESHOLD = 80;
 
     /**
      * Constructor for Parttime object, creates Parttime employee with given name, department, dateHired and hourlyRate
@@ -19,7 +18,8 @@ public class Parttime extends Employee{
     Parttime(String name, String department, Date dateHired, double hourlyRate) {
         super(name, department, dateHired);
         this.hourlyRate = hourlyRate;
-        overtimeRate = hourlyRate * 1.5;
+        final double OVERTIME_MULTIPLE = 1.5;
+        overtimeRate = hourlyRate * OVERTIME_MULTIPLE;
     }
 
     /**
@@ -30,38 +30,14 @@ public class Parttime extends Employee{
      */
     Parttime(String name, String department, Date dateHired) {
         super(name, department, dateHired);
-
-
     }
-
-//    Parttime(String name, String department, Date dateHired, int hours) {
-//        super(name, department, dateHired);
-//        this.hours = hours;
-//    }
 
     /**
      * setter method for hours attribute of Parttime employee
      * @param hours num hours of Parttime employee
      */
     public void setHours(int hours) {
-
         this.hours = hours;
-    }
-
-    /**
-     * getter method for hours attribute of Parttime employee
-     * @return int hours of Parttime employee
-     */
-    public int getHours() {
-        return hours;
-    }
-
-    /**
-     * returns formatted String of hourlyRate
-     * @return String representation of hourlyRate to 2 decimals
-     */
-    private String getFormattedRate() {
-        return formatter.format(hourlyRate);
     }
 
     /**
@@ -71,7 +47,7 @@ public class Parttime extends Employee{
     @Override
     public String toString() {
         // Doe,Jane::ECE::8/1/2020::Payment $0.00::PART TIME::Hourly Rate $39.00::Hours worked this period: 0
-        return super.toString() + String.format(IoFields.PARTTIME_EMPLOYEE_STRING, super.getFormattedPayment(), getFormattedRate(), hours);
+        return super.toString() + String.format(IoFields.PARTTIME_EMPLOYEE_STRING, super.getFormattedPayment(), useFormatter(hourlyRate), hours);
     }
 
     /**
@@ -94,6 +70,7 @@ public class Parttime extends Employee{
      */
     @Override
     public void calculatePayment() {
+        final int OVERTIME_THRESHOLD = 80;
         int regularHours = hours;
         int overtimeHours = 0;
 

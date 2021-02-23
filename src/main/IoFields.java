@@ -15,7 +15,7 @@ public final class IoFields {
     public static final String INVALID_SALARY_LOG = "Salary cannot be negative.";
     public static final String EMPLOYEE_ADD_SUCCESS_LOG = "Employee Added.";
     public static final String EMPLOYEE_ADD_FAILURE_LOG = "Employee is already in the list.";
-    public static final String EMPLOYEE_REMOVE_SUCESS_LOG = "Employee removed";
+    public static final String EMPLOYEE_REMOVE_SUCCESS_LOG = "Employee removed";
     public static final String INVALID_EMPLOYEE_LOG = "Employee does not exist.";
     public static final String EMPTY_DB_LOG = "Employee database is empty.";
     public static final String PAYMENT_PROCESS_COMPLETE_LOG = "Calculation of employee payments is done.%n %n";

@@ -9,17 +9,17 @@
 public class Company {
     private Employee[] empList;
     private int numEmployee;
-    private final int sizeFactor = 4; // initialize here for use in constructor
+    private final int SIZE_FACTOR = 4; // initialize here for use in constructor
     public static final int HOURS_LOWER_BOUND = 0;
     public static final int HOURS_UPPER_BOUND = 100;
-    public static final String[] departmentCodes = { "CS", "ECE", "IT" };
-    public static final int[] managerCodes = { 1, 2, 3 };
+    public static final String[] DEPARTMENT_CODES = { "CS", "ECE", "IT" };
+    public static final int[] MANAGER_CODES = { 1, 2, 3 };
 
     /**
      * default constructor to create an empty bag with numEmployee = 0
      */
     public Company() {
-        empList = new Employee[sizeFactor];
+        empList = new Employee[SIZE_FACTOR];
         numEmployee = 0;
     }
 
@@ -44,7 +44,7 @@ public class Company {
      */
     private void grow() {
         // create new array of length current + 4
-        Employee[] newBag = new Employee[empList.length + sizeFactor];
+        Employee[] newBag = new Employee[empList.length + SIZE_FACTOR];
 
         // copy over all elements from current to new array
         for (int i = 0; i < empList.length; i++) {
@@ -154,9 +154,9 @@ public class Company {
      * processes payments for all employees
      */
     public void processPayments() {
-        for(int i = 0; i < empList.length; i++) {
-            if(empList[i] != null) {
-                empList[i].calculatePayment();
+        for (Employee employee : empList) {
+            if (employee != null) {
+                employee.calculatePayment();
             }
         }
     }
@@ -165,9 +165,9 @@ public class Company {
      * print earning statements for all employees
      */
     public void print() {
-        for(int i = 0; i < empList.length; i++) {
-            if(empList[i] != null) {
-                System.out.println(empList[i].toString());
+        for (Employee employee : empList) {
+            if (employee != null) {
+                System.out.println(employee.toString());
             }
         }
     }
@@ -178,15 +178,22 @@ public class Company {
      */
     public void sortByDate(){
         int n = numEmployee;
+        final int EQUALS_CASE = 0;
+        Date currIndexEmployeeDate;
+        Date minIndexEmployeeDate;
 
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < n - 1; i++) {
             // Find the minimum element in unsorted array
             int min_idx = i;
-            for (int j = i + 1; j < n; j++)
-                if (empList[j].getProfile().getDateHired().compareTo(empList[min_idx].getProfile().getDateHired()) == -1)
+            for (int j = i + 1; j < n; j++) {
+                currIndexEmployeeDate = empList[j].getProfile().getDateHired();
+                minIndexEmployeeDate = empList[min_idx].getProfile().getDateHired();
+                // if currIndexEmployeeDate is less than minIndexEmployeeDate
+                if (currIndexEmployeeDate.compareTo(minIndexEmployeeDate) < EQUALS_CASE) {
                     min_idx = j;
-
+                }
+            }
             // Swap the found minimum element with the first
             // element
             Employee temp = empList[min_idx];
@@ -212,20 +219,9 @@ public class Company {
      * prints earnings statements only for employees in CS Department
      */
     public void printCSDepartment(){
-        for(int i = 0; i < empList.length; i++) {
-            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("CS")) {
-                System.out.println(empList[i].toString());
-            }
-        }
-    }
-
-    /**
-     * prints earnings statements only for employees in IT Department
-     */
-    public void printITDepartment(){
-        for(int i = 0; i < empList.length; i++) {
-            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("IT")) {
-                System.out.println(empList[i].toString());
+        for (Employee employee : empList) {
+            if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[0])) {
+                System.out.println(employee.toString());
             }
         }
     }
@@ -234,9 +230,20 @@ public class Company {
      * prints earnings statements only for employees in ECE Department
      */
     public void printECEDepartment(){
-        for(int i = 0; i < empList.length; i++) {
-            if(empList[i] != null && empList[i].getProfile().getDepartment().equals("ECE")) {
-                System.out.println(empList[i].toString());
+        for (Employee employee : empList) {
+            if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[1])) {
+                System.out.println(employee.toString());
+            }
+        }
+    }
+
+    /**
+     * prints earnings statements only for employees in IT Department
+     */
+    public void printITDepartment(){
+        for (Employee employee : empList) {
+            if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[2])) {
+                System.out.println(employee.toString());
             }
         }
     }

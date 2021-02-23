@@ -1,8 +1,3 @@
-/*
-Define the profile of an employee with the following. You cannot add additional instance
-variables and must include toString() and equals() methods.
- */
-
 /**
  * Defines the profile of an employee with a name, department, and dateHired. A profile is unique to each employee
  */
@@ -15,7 +10,7 @@ public class Profile {
      * constructor for Profile object, creates Profile with given name, department and date of hire
      * @param name name of employee
      * @param department department of employee
-     * @param dateHired date of hire of emplyoee
+     * @param dateHired date of hire of employee
      */
     Profile(String name, String department, Date dateHired) {
         this.name = name;
@@ -29,7 +24,7 @@ public class Profile {
     }
 
     /**
-     * Overriden equals method compares two Profiles and determines if they are equal
+     * Overridden equals method compares two Profiles and determines if they are equal
      * @param obj Profile object to be evaluated for equality
      * @return true if the name, department ,and date of Hire of two Profiles are equal
      */
@@ -47,23 +42,10 @@ public class Profile {
         // typecast o to Employee so that we can compare data members
         Profile p = (Profile) obj;
 
-        if ( this.name.equals(p.name) &&
+        // two profiles are equal only if their name, department and hireDates are equal
+        return this.name.equals(p.name) &&
                 this.department.equals(p.department) &&
-                this.dateHired.compareTo(p.dateHired) == 0 )
-        {
-            return true;                // two profiles are equal only if their name, department and hireDates are equal
-        }
-        else {
-            return false;
-        }
-    } //compare name, department and dateHired
-
-    /**
-     * getter method for name of Profile
-     * @return name of Profile
-     */
-    public String getName() {
-        return this.name;
+                this.dateHired.compareTo(p.dateHired) == 0;
     }
 
     /**

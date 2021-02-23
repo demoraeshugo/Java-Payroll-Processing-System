@@ -12,7 +12,7 @@ import java.util.Scanner;
  *  @author Hugo De Moraes, Jonathan Dong
  */
 public class PayrollProcessing {
-    private final Company company;
+    private Company company;
     private String userInput;
     private String[] tokens;
 
@@ -73,7 +73,7 @@ public class PayrollProcessing {
      * @return true if code is valid, false otherwise
      */
     private boolean isValidDeptCode(String code) {
-        for (String departmentCode : Company.departmentCodes) {
+        for (String departmentCode : Company.DEPARTMENT_CODES) {
             if (departmentCode.equals(code)) {
                 return true;
             }
@@ -119,7 +119,7 @@ public class PayrollProcessing {
      * @return true if code is integer between 1 and 3, false otherwise
      */
     private boolean isValidMgmtCode(int code) {
-        for (int managerCode : Company.managerCodes) {
+        for (int managerCode : Company.MANAGER_CODES) {
             if (code == managerCode) {
                 return true;
             }
@@ -270,7 +270,7 @@ public class PayrollProcessing {
             return;
         }
 
-        System.out.println(IoFields.EMPLOYEE_REMOVE_SUCESS_LOG);
+        System.out.println(IoFields.EMPLOYEE_REMOVE_SUCCESS_LOG);
     }
 
     /**

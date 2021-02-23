@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
  * and a decimal formatter. Multiple Employees will be held by the Company Class.
  */
 public class Employee {
-    private final Profile profile;
+    private Profile profile;
     private double payment;
     static DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
 
@@ -21,7 +21,7 @@ public class Employee {
     }
 
     /**
-     * Overriden toString method converts Employee to its String representation
+     * Overridden toString method converts Employee to its String representation
      * @return a formatted String containing the Employee's name, department and date hired
      */
     @Override
@@ -30,7 +30,7 @@ public class Employee {
     }
 
     /**
-     * Overriden equals method compares two Employees and determines if they equal.
+     * Overridden equals method compares two Employees and determines if they equal.
      * @param o Employee object to be evaluated for equality
      * @return true if the profiles of two employees are equal, false otherwise
      */
@@ -48,12 +48,8 @@ public class Employee {
         Employee e = (Employee) o;
 
         // Compare the data members and return accordingly
-        if (profile.equals(e.profile)) {
-            // two employees are equal only if their profiles are
-            return true;
-        } else {
-            return false;
-        }
+        // two employees are equal only if their profiles are
+        return profile.equals(e.profile);
     }
 
     /**
@@ -68,9 +64,7 @@ public class Employee {
      * blank method that is implemented in children of Employee
      * used to calculate payment
      */
-    public void calculatePayment() {
-
-    }
+    public void calculatePayment() { }
 
     /**
      * setter method for payment attribute of employee
@@ -93,6 +87,13 @@ public class Employee {
      * @return String representation of payment to 2 decimals
      */
     public String getFormattedPayment() {
-        return formatter.format(payment);
+        return useFormatter(payment);
     }
+
+    /**
+     * helper method to format doubles into strings that match #,###,##0.00
+     * @param value representation of number
+     * @return well formatted string to 2 decimals
+     */
+    public String useFormatter(double value) { return formatter.format(value); }
 }

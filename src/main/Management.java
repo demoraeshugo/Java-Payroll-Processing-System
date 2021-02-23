@@ -3,11 +3,10 @@
  * roleName, roleCode, and additionalComp.
  */
 public class Management extends Fulltime{
-    private final int roleCode;
-    private final String roleName;
-    private final double additionalComp;
+    private String roleName;
+    private double additionalComp;
     private final String[] ROLES = { "Manager", "Department Head", "Director" };
-    private final int[] ROLE_BONUSES = { 5000, 9500, 12000 };
+    private final double[] ROLE_BONUSES = { 5000.00, 9500.00, 12000.00 };
 
     /**
      * Constructor for Managment object, creates Management employee with given name, department, date of Hire,
@@ -20,9 +19,8 @@ public class Management extends Fulltime{
      */
     Management(String name, String department, Date dateHired, int salary, int mgmtCode) {
         super(name, department, dateHired, salary);
-        roleCode = mgmtCode;
         roleName = ROLES[mgmtCode-1];
-        additionalComp = ROLE_BONUSES[mgmtCode-1] * 1.0 / super.getNumPayPeriod();
+        additionalComp = ROLE_BONUSES[mgmtCode-1] / super.getNumPayPeriod();
     }
 
     /**
@@ -32,7 +30,7 @@ public class Management extends Fulltime{
     @Override
     public String toString() {
         // Doe,Jane::IT::2/28/2012::Payment $0.00::FULL TIME::Annual Salary $85,000.00::Manager Compensation $192.31
-        return super.toString() + String.format(IoFields.MANAGER_STRING, roleName, getFormattedAdditionalComp());
+        return super.toString() + String.format(IoFields.MANAGER_STRING, roleName, useFormatter(additionalComp));
     }
 
     /**
@@ -50,19 +48,11 @@ public class Management extends Fulltime{
 
     /**
      * Overridden calculatePayment method calculates and sets the payment of Management employee
-     *       sets payment as Salary/ number of pay periods plus additional compensation corresponding to roleCode
+     * sets payment as Salary/ number of pay periods plus additional compensation corresponding to roleCode
      */
     @Override
     public void calculatePayment() {
         super.calculatePayment();
         super.addPayment(additionalComp);
-    }
-
-    /**
-     * returns a formatted string representing additional compensation of Management employee
-     * @return formatted String of additional compensation
-     */
-    private String getFormattedAdditionalComp() {
-        return formatter.format(additionalComp);
     }
 }
