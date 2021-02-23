@@ -4,11 +4,13 @@ import java.text.DecimalFormat;
  * Employee class represents an abstract data type Employee, which models any employee in a real life situation.
  * Each employee  is designed with a profile (abstract data type with name, date hired,and department), a payment number,
  * and a decimal formatter. Multiple Employees will be held by the Company Class.
+ *
+ * @author Hugo De Moraes, Jonathan Dong
  */
 public class Employee {
     private Profile profile;
     private double payment;
-    static DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
+    private DecimalFormat formatter = new DecimalFormat("#,###,##0.00");
 
     /**
      * constructor for Employee, creates Employee with given name, department, and date hired.

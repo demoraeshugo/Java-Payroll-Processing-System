@@ -1,6 +1,8 @@
 /**
  * Fulltime Class is a child class of Employee, and represents a Full-time employee with additional instance variable
  * Salary.
+ *
+ * @author Hugo De Moraes, Jonathan Dong
  */
 public class Fulltime extends Employee {
     private Double salary;

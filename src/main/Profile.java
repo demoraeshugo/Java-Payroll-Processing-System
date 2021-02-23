@@ -1,5 +1,7 @@
 /**
  * Defines the profile of an employee with a name, department, and dateHired. A profile is unique to each employee
+ *
+ * @author Hugo De Moraes, Jonathan Dong
  */
 public class Profile {
     private String name; //employee’s name in the form “lastname,firstname”

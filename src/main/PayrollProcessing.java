@@ -187,7 +187,7 @@ public class PayrollProcessing {
     /* -------------- Handler Methods -------------- */
 
     /**
-     * processes user input from commmand line when adding a Parttime employee
+     * processes user input from command line when adding a Parttime employee
      */
     private void handleAddParttime() {
         // get input fields

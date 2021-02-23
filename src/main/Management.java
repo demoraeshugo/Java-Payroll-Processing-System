@@ -1,6 +1,8 @@
 /**
  * Management class is a child class of Fulltime and represents a Management Employee with additional instance variables
  * roleName, roleCode, and additionalComp.
+ *
+ * @author Hugo De Moraes, Jonathan Dong
  */
 public class Management extends Fulltime{
     private String roleName;
