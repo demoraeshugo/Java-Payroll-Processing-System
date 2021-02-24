@@ -19,17 +19,17 @@ other week. Calculation of the payments are different depending on an employeeâ€
 | Command | Description | Pattern | Example
 | --- | --- |
 | AP | Add a new Parttime level Employee to the system | AP {lastName},{FirstName} {departmentCode} {month}/{day}/year {payRate} | AP Doe,Jane CS 7/1/2020 45.9 |
-| AF | Add a new Fulltime level Employee to the system | 
-| AM | Add a new Manament level Employee to the system |
-| R | Remove the employee with the matching profile |
-| C | Calculate payment for all employees |
-| S | Set the hours of the given Parttime employee |
-| PA | Print all Employees in the system |
-| PH | Print all Employees in the system by hire-date |
-| PD | Print all Employees in the system by department type |
-| Q | Quit out of the program |
-| RF | Run commands from file |
-| N | Create a new Company, discards all previously entered data |
+| AF | Add a new Fulltime level Employee to the system | | |
+| AM | Add a new Manament level Employee to the system | | |
+| R | Remove the employee with the matching profile | | |
+| C | Calculate payment for all employees | | |
+| S | Set the hours of the given Parttime employee | | |
+| PA | Print all Employees in the system | | |
+| PH | Print all Employees in the system by hire-date | | |
+| PD | Print all Employees in the system by department type | | |
+| Q | Quit out of the program | | |
+| RF | Run commands from file | | |
+| N | Create a new Company, discards all previously entered data | | |
 
 ### Javadoc
 
