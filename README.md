@@ -18,11 +18,10 @@ other week. Calculation of the payments are different depending on an employeeâ€
 
 | Type | Payment Calculation | Additional Compensation| Example
 | --- | --- | --- | --- |
-| Parttime | Pay by the hours worked during the 2-week period | The hours exceed 80 will be paid 1.5 times of the regular hourly rate | Doe,Jane CS 7/1/2020 5.9|
-| | Each part-time employee has a different hourly rate | | |
-| | Maximum hours per week is 40, i.e., 80 per pay period, NOT to exceed 100 hours per pay period |  |
+| Parttime | <ul><li>Pay by the hours worked during the 2-week period</li><li>Each part-time employee has a different hourly rate</li><li>Maximum hours per week is 40, i.e., 80 per pay period, NOT to exceed 100 hours per pay period</li></ul> | The hours exceed 80 will be paid 1.5 times of the regular hourly rate | Doe,Jane CS 7/1/2020 5.9|
 | Fulltime | <ul><li>There are 26 pay periods per year</li><li>he payment for each pay period equals to annual salary divided by 26</li></ul> | NONE | Doe,Jane CS 1/1/2005 85000 |
 | Management | <ul><li>There are 26 pay periods per year</li><li>he payment for each pay period equals to annual salary divided by 26</li></ul> | <ol><li> Manager: $5,000 annually</li><li> Department Head: $9,500 annually</li><li> Director: $12,000 annually </li></ol> | AM Doe,John CS 2/28/2012 85000 2 |
+
 
 ### Supported Commands
 
