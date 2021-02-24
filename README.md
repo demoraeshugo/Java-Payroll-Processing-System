@@ -17,7 +17,7 @@ other week. Calculation of the payments are different depending on an employeeâ€
 ### Supported Commands
 
 | Command | Description | Pattern | Example
-| --- | --- |
+| --- | --- | --- | --- |
 | AP | Add a new Parttime level Employee to the system | AP {lastName},{FirstName} {departmentCode} {month}/{day}/year {payRate} | AP Doe,Jane CS 7/1/2020 45.9 |
 | AF | Add a new Fulltime level Employee to the system | | |
 | AM | Add a new Manament level Employee to the system | | |
