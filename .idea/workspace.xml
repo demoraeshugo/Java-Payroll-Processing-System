@@ -1,48 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="Updated Javadoc and UML">
-      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Commands.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Commands.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Company.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Company.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/CompanyTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/CompanyTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Date.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Date.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Fulltime.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Fulltime.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/IoFields.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/IoFields.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Management.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Management.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/ManagementTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/ManagementTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Parttime.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Parttime.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/PayrollProcessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/PayrollProcessing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/Profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/RunProject2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/RunProject2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/payroll_processing_system/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/payroll_processing_system/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payroll_processing_system.png" beforeDir="false" afterPath="$PROJECT_DIR$/payroll_processing_system.png" afterDir="false" />
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="idea">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java-Payroll-Processing-System.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Payroll-Processing-System.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payroll_processing_system.uml" beforeDir="false" afterPath="$PROJECT_DIR$/payroll_processing_system.uml" afterDir="false" />
     </list>
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
@@ -189,6 +150,7 @@
       <workItem from="1613981026354" duration="2585000" />
       <workItem from="1614017106535" duration="499000" />
       <workItem from="1614017620532" duration="37000" />
+      <workItem from="1614126375135" duration="34000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -281,7 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1614125735698</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated Javadoc and UML">
+      <created>1614126053729</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614126053729</updated>
+    </task>
+    <task id="LOCAL-00015" summary="idea">
+      <created>1614126081107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614126081107</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +290,8 @@
     <MESSAGE value="Merging" />
     <MESSAGE value="Changed access for a few methods in Company.java" />
     <MESSAGE value="Updated Javadoc and UML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Javadoc and UML" />
+    <MESSAGE value="idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
