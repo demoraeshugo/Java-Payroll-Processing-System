@@ -14,6 +14,10 @@ other week. Calculation of the payments are different depending on an employeeâ€
 
 ## Documentation
 
+### Javadoc
+
+<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages ðŸš€  </a>
+
 ### Supported Departments
 
 | Input Parameter | Description
@@ -54,10 +58,6 @@ other week. Calculation of the payments are different depending on an employeeâ€
 | Q | Quit out of the program | Q |
 | RF | Run commands from file | RF |
 | N | Create a new Company, discards all previously entered data | N |
-
-### Javadoc
-
-<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages ðŸš€  </a>
 
 ## UML Diagram
 
