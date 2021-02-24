@@ -1,5 +1,8 @@
 package payroll_processing_system;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 /**
@@ -46,6 +49,8 @@ public class PayrollProcessing {
             case Commands.PRINT_ALL -> handlePrintAll();
             case Commands.PRINT_BY_HIRE_DATE -> handlePrintByHireDate();
             case Commands.PRINT_BY_DEPARTMENT -> handlePrintByDepartment();
+            case Commands.RUN_FILE -> handleRunFile();
+            case Commands.NEW -> handleNew();
             default -> System.out.printf(IoFields.INVALID_COMMAND_LOG, userInput);
         }
     }
@@ -416,6 +421,34 @@ public class PayrollProcessing {
             return true;
         }
         return false;
+    }
+
+    /**
+     * handles new command, creates new company with no data
+     */
+    private void handleNew() {
+        company = new Company();
+        System.out.println(IoFields.NEW_COMMAND_LOG);
+    }
+
+    /**
+     * handles run file command, reads input from src/payroll_processing_system/testCases.txt
+     */
+    private void handleRunFile() {
+        File file = new File("src/payroll_processing_system/testCases.txt");
+
+        try (Scanner sc = new Scanner(file, StandardCharsets.UTF_8.name())) {
+            do {
+                tokens = tokenize(sc.nextLine());
+                userInput = tokens[0];
+                if(!userInput.equals(Commands.QUIT)){
+                    handleUserInput();
+                }
+            } while(!userInput.equals(Commands.QUIT) && sc.hasNextLine());
+        }
+        catch (IOException e) {
+            System.out.println(IoFields.FILE_ERROR);
+        }
     }
 
     /**

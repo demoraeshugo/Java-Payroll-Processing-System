@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="idea">
+    <list default="true" id="f9c05780-9c8d-427d-b8aa-60f9aac44ae7" name="Default Changelist" comment="removed /javadoc&#10;added /docs">
+      <change afterPath="$PROJECT_DIR$/src/payroll_processing_system/testCases.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-Payroll-Processing-System.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Payroll-Processing-System.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payroll_processing_system.uml" beforeDir="false" afterPath="$PROJECT_DIR$/payroll_processing_system.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/Commands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/IoFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/IoFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/PayrollProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Payroll-Processing-System/payroll_processing_system/PayrollProcessing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payroll_processing_system/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/Commands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payroll_processing_system/IoFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/IoFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/payroll_processing_system/PayrollProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/payroll_processing_system/PayrollProcessing.java" afterDir="false" />
     </list>
     <list id="35bf2160-7b41-40d2-87a9-a361fac2210f" name="Changes by jonad" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,6 +108,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompanyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java-Payroll-Processing-System" />
       <option name="PACKAGE_NAME" value="" />
@@ -151,6 +167,7 @@
       <workItem from="1614017106535" duration="499000" />
       <workItem from="1614017620532" duration="37000" />
       <workItem from="1614126375135" duration="34000" />
+      <workItem from="1614150892709" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="Added project framework">
       <created>1613420920316</created>
@@ -257,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614126081107</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="removed /javadoc&#10;added /docs">
+      <created>1614151054320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614151054320</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +315,8 @@
     <MESSAGE value="Changed access for a few methods in Company.java" />
     <MESSAGE value="Updated Javadoc and UML" />
     <MESSAGE value="idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea" />
+    <MESSAGE value="removed /javadoc&#10;added /docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed /javadoc&#10;added /docs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

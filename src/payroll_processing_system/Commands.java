@@ -18,4 +18,6 @@ public final class Commands {
     public final static String PRINT_BY_HIRE_DATE = "PH";
     public final static String PRINT_BY_DEPARTMENT = "PD";
     public final static String QUIT = "Q";
+    public final static String RUN_FILE = "RF";
+    public final static String NEW = "N";
 }

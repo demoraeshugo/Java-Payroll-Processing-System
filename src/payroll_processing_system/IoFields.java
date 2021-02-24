@@ -32,4 +32,6 @@ public final class IoFields {
     public static final String PRINT_BY_DEPT_PROMPT = "%n--Printing earning statements by department--%n";
     public static final String PRINT_BY_DATE_PROMPT = "%n--Printing earning statements by date hired--%n";
     public static final String MISSING_PARAMS_LOG = "Error: missing parameters for this command";
+    public static final String FILE_ERROR = "Error: testCases.txt not found!";
+    public static final String NEW_COMMAND_LOG = "New company created.";
 }
