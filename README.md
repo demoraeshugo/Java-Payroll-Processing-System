@@ -12,7 +12,26 @@ including the employee’s name, department and the date hired, assuming there a
 “computer science”, “electrical and computer engineering” and “information technology”. The payroll is processed every
 other week. Calculation of the payments are different depending on an employee’s employment type.
 
-## Javadoc
+## Documentation
+
+### Supported Commands
+
+| Command | Description |
+| --- | --- |
+| AP | Add a new Parttime level Employee to the system |
+| AF | Add a new Fulltime level Employee to the system |
+| AM | Add a new Manament level Employee to the system |
+| R | Remove the employee with the matching profile |
+| C | Calculate payment for all employees |
+| S | Set the hours of the given Parttime employee |
+| PA | Print all Employees in the system |
+| PH | Print all Employees in the system by hire-date |
+| PD | Print all Employees in the system by department type |
+| Q | Quit out of the program |
+| RF | Run commands from file |
+| N | Create a new Company, discards all previously entered data |
+
+### Javadoc
 
 <a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages 🚀  </a>
 
