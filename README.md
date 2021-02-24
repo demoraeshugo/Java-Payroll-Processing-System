@@ -19,17 +19,17 @@ other week. Calculation of the payments are different depending on an employeeâ€
 | Command | Description | Example
 | --- | --- | --- |
 | AP | Add a new Parttime level Employee to the system | AP Doe,Jane CS 7/1/2020 45.9 |
-| AF | Add a new Fulltime level Employee to the system | |
-| AM | Add a new Manament level Employee to the system | |
-| R | Remove the employee with the matching profile | |
-| C | Calculate payment for all employees | |
-| S | Set the hours of the given Parttime employee | |
-| PA | Print all Employees in the system | |
-| PH | Print all Employees in the system by hire-date | |
-| PD | Print all Employees in the system by department type | |
-| Q | Quit out of the program | |
-| RF | Run commands from file | |
-| N | Create a new Company, discards all previously entered data | |
+| AF | Add a new Fulltime level Employee to the system | AF Doe,Jane CS 1/1/2005 85000 |
+| AM | Add a new Manament level Employee to the system | AM Doe,Jane CS 2/28/2012 85000 1 |
+| R | Remove the employee with the matching profile | R Doe,Jane CS 7/1/2020 |
+| C | Calculate payment for all employees | C |
+| S | Set the hours of the given Parttime employee | S Doe,Jane IT 7/1/2020 77 |
+| PA | Print all Employees in the system | PA |
+| PH | Print all Employees in the system by hire-date | PH |
+| PD | Print all Employees in the system by department type | PD |
+| Q | Quit out of the program | Q |
+| RF | Run commands from file | RF |
+| N | Create a new Company, discards all previously entered data | N |
 
 ### Javadoc
 
