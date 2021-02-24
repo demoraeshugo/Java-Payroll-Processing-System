@@ -23,8 +23,7 @@ other week. Calculation of the payments are different depending on an employeeâ€
 | | Maximum hours per week is 40, i.e., 80 per pay period, NOT to exceed 100 hours per pay period |  |
 | Fulltime | There are 26 pay periods per year | NONE | Doe,Jane CS 1/1/2005 85000 |
 | | The payment for each pay period equals to annual salary divided by 26 | |
-| Management | There are 26 pay periods per year | <ol><li> Manager: $5,000 annually</li><li> Department Head: $9,500 annually</li><li> Director: $12,000 annually </li></ol> | AM Doe,John CS 2/28/2012 85000 2 |
-| | The payment for each pay period equals to annual salary divided by 26 | |
+| Management | <ul><li>There are 26 pay periods per year</li><li>he payment for each pay period equals to annual salary divided by 26</li></ul> | <ol><li> Manager: $5,000 annually</li><li> Department Head: $9,500 annually</li><li> Director: $12,000 annually </li></ol> | AM Doe,John CS 2/28/2012 85000 2 |
 
 ### Supported Commands
 
