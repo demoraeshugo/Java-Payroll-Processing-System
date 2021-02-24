@@ -30,6 +30,14 @@ other week. Calculation of the payments are different depending on an employeeâ€
 | ECE | Electrical & Computer Engineering |
 | IT | Information Technology |
 
+### Supported Managment Roles
+
+| Input Parameter | Description
+| --- | --- |
+| 1 | Manager |
+| 2 | Department Head |
+| 3 | Director |
+
 ### Supported Commands
 
 | Command | Description | Example
