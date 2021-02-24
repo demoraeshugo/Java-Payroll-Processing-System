@@ -6,7 +6,7 @@ package payroll_processing_system;
  * @author Hugo De Moraes, Jonathan Dong
  */
 public class Profile {
-    private String name; //employee’s name in the form “lastname,firstname”
+    private String name; //employee’s name in the form lastname,firstname
     private String department; //department code: CS, ECE, IT
     private Date dateHired;
 
