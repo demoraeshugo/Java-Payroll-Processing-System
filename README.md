@@ -14,6 +14,14 @@ other week. Calculation of the payments are different depending on an employeeâ€
 
 ## Documentation
 
+### Supported Employee Types
+
+| Type | Description | Example
+| --- | --- | --- |
+| Parttime | Pay by the hours worked during the 2-week period | Doe,Jane CS 7/1/2020 |
+| | Each part-time employee has a different hourly rate | |
+| | Maximum hours per week is 40, i.e., 80 per pay period, NOT to exceed 100 hours per pay period |  |
+
 ### Supported Commands
 
 | Command | Description | Example
