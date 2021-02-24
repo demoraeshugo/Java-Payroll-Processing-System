@@ -161,17 +161,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.RunProject2">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunProject2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="payroll_processing_system.RunProject2" />
       <module name="Java-Payroll-Processing-System" />
