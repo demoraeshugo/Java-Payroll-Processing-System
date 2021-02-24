@@ -147,21 +147,17 @@ public class Company {
     }
 
     /**
-     * print earning statements for all employees
+     * checks if number of employees in Company is 0
+     * @return true if number of employees in company is 0, false otherwise
      */
-    public void print() {
-        for (Employee employee : empList) {
-            if (employee != null) {
-                System.out.println(employee.toString());
-            }
-        }
+    public boolean isEmpty() {
+        return numEmployee == 0;
     }
-
 
     /**
      * sorts employees by date of hire
      */
-    public void sortByDate(){
+    private void sortByDate(){
         int n = numEmployee;
         final int EQUALS_CASE = 0;
         Date currIndexEmployeeDate;
@@ -189,21 +185,9 @@ public class Company {
     }
 
     /**
-     * prints earnings statements for all employees in order of hire date
-     */
-    public void printByDate() {
-        if (isEmpty()) {
-            System.out.println(IoFields.EMPTY_DB_LOG);
-        } else {
-            sortByDate();
-            print();
-        }
-    }
-
-    /**
      * prints earnings statements only for employees in CS Department
      */
-    public void printCSDepartment(){
+    private void printCSDepartment(){
         for (Employee employee : empList) {
             if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[0])) {
                 System.out.println(employee.toString());
@@ -214,10 +198,10 @@ public class Company {
     /**
      * prints earnings statements only for employees in ECE Department
      */
-    public void printECEDepartment(){
+    private void printECEDepartment(){
         for (Employee employee : empList) {
             if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[1])) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
             }
         }
     }
@@ -225,12 +209,31 @@ public class Company {
     /**
      * prints earnings statements only for employees in IT Department
      */
-    public void printITDepartment(){
+    private void printITDepartment(){
         for (Employee employee : empList) {
             if (employee != null && employee.getProfile().getDepartment().equals(DEPARTMENT_CODES[2])) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
             }
         }
+    }
+
+    /**
+     * print earning statements for all employees
+     */
+    public void print() {
+        for (Employee employee : empList) {
+            if (employee != null) {
+                System.out.println(employee);
+            }
+        }
+    }
+
+    /**
+     * prints earnings statements for all employees in order of hire date
+     */
+    public void printByDate() {
+        sortByDate();
+        print();
     }
 
     /**
@@ -240,13 +243,5 @@ public class Company {
         printCSDepartment();
         printECEDepartment();
         printITDepartment();
-    }
-
-    /**
-     * checks if number of employees in Company is 0
-     * @return true if number of employees in company is 0, false otherwise
-     */
-    public boolean isEmpty() {
-        return numEmployee == 0;
     }
 }
