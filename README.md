@@ -14,7 +14,7 @@ other week. Calculation of the payments are different depending on an employeeâ€
 
 ## Javadoc
 
-<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages </a>
+<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages ðŸš€  </a>
 
 ## UML Diagram
 
