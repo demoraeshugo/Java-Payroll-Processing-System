@@ -58,6 +58,6 @@ You *may* have to zoom in
 | RF | Run commands from file | RF |
 | N | Create a new Company, discards all previously entered data | N |
 
-## UML Diagram
+### UML Diagram
 
 ![Web_Frame@2x](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll_processing_system.png?token=AKZ6UIYTCYH33IV32J7KNXTAH27VY)
