@@ -8,7 +8,9 @@ Develop a Payroll Processing System to process the payments to the employees in 
 
 You *may* have to zoom in 🔎 
 
-// ![console output](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll-processing-demo.gif)
+<!--
+![console output](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll-processing-demo.gif)
+-->
 
 ## Documentation
 
