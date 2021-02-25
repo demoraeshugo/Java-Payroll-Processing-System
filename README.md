@@ -14,7 +14,7 @@ You *may* have to zoom in 🔎
 
 ### Javadoc
 
-<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages 🚀  </a>
+<a href="https://demoraeshugo.github.io/Java-Payroll-Processing-System/payroll_processing_system/package-summary.html"> Hosted on Github Pages</a> 🚀
 
 ### Supported Departments
 
