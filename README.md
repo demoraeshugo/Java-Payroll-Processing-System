@@ -1,4 +1,4 @@
-# Java-Payroll-Processing-System
+# Java-Payroll-Processing-System ⚙️ 
 
 ## Project Description
 
@@ -7,7 +7,7 @@ For simplicity, the system will not process the possible deduction items in the 
 
 ## Demo
 
-You *may* have to zoom in 
+You *may* have to zoom in 🔎 
 
 ![console output](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll-processing-demo.gif)
 
