@@ -7,6 +7,7 @@ Develop a Payroll Processing System to process the payments to the employees in 
 ## Demo
 
 You *may* have to zoom in 🔎 
+
 Sample output from these <a href="https://github.com/demoraeshugo/Java-Payroll-Processing-System/blob/main/src/payroll_processing_system/testCases.txt">textcases</a>
 
 ![console output](https://raw.githubusercontent.com/demoraeshugo/Java-Payroll-Processing-System/main/payroll-processing-demo-full.gif)
