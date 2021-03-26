@@ -4,6 +4,8 @@
 
 Develop a Payroll Processing System to process the payments to the employees in a company. For simplicity, the system will not process the possible deduction items in the paychecks. The project shall process the command lines entered on the console and display the output on the console. The command lines include the instructions for adding/removing an employee, calculating the payments, printing the earning statements, and managing the working hours of the part time employees.
 
+### Final Grade: 65/65
+
 ## Demo
 
 You *may* have to zoom in 🔎 
